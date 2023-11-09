@@ -24,4 +24,4 @@ coverage
 *.sw?
 
 # ignore dev specific .sublime-workspace files
-PaliaCompanion.sublime-project
+PaliaCompanion.sublime-workspace
