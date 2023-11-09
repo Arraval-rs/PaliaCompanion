@@ -4,61 +4,208 @@
             <q-avatar>
                 <img src="./assets/Logo.webp"/>
             </q-avatar>
-            Palia Tools
+            Companion
         </q-toolbar-title>
+    </div>
+    <div>
+        <label for="users">Select a User: </label>
+        <select name="users" id="users">
+            <option value="april">April</option>
+            <option value="cody">Cody</option>
+        </select>
     </div>
     <div id="app">
         <h3 class="p-3 text-center">Villager Weekly Wants</h3>
+        <br>
         <table>
             <thead>
                 <tr>
                     <th>NPC</th>
                     <th>Daily Gift</th>
-                    <th>Weekly Romance</th>
-                    <th>Weekly Want 1</th>
-                    <th>Weekly Want 2</th>
-                    <th>Weekly Want 3</th>
-                    <th>Weekly Want 4</th>
+                    <th>Romance Gift</th>
+                    <th>Want 1</th>
+                    <th>Want 2</th>
+                    <th>Want 3</th>
+                    <th>Want 4</th>
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="villager in villagers" is="vue:VillagerRow" :villager=villager></tr>
+                <tr @gifted="updateVillager" v-for="(villager, index) in villagers" is="vue:VillagerRow" :villager=villager :villagerIndex=index></tr>
             </tbody>
         </table>
-    </div>    
+    </div>   
 </template>
 
 <script setup>
-import { ref } from 'vue';
-import VillagerRow from './components/Villager.vue'
+import { onMounted, ref } from 'vue';
+import { useStorage } from '@vueuse/core'
+import VillagerRow from './components/Villager.vue';
 
+const villagers = ref(useStorage('Villagers', [
+    {Name: 'Ashura', dailyGift: false, weeklyRomance: false, weeklyWants: [
+                                                                                {Name: "Grilled Fish", Gifted: false},
+                                                                                {Name: "Samara", Gifted: false},
+                                                                                {Name: "Pinecone", Gifted: false},
+                                                                                {Name: "Sashimi", Gifted: false}
+                                                                            ]},
+    {Name: 'Auni', dailyGift: false, weeklyRomance: false, weeklyWants:    [
+                                                                                {Name: "Common Blue Butterfly", Gifted: false}, 
+                                                                                {Name: "Garden Leafhopper", Gifted: false}, 
+                                                                                {Name: "Stripeshell Snail", Gifted: false}, 
+                                                                                {Name: "Apple Pie", Gifted: false}
+                                                                            ]},
+    {Name: 'Badruu', dailyGift: false, weeklyRomance: false, weeklyWants:  [
+                                                                                {Name: "Potato Seed", Gifted: false}, 
+                                                                                {Name: "Corn Seed", Gifted: false}, 
+                                                                                {Name: "Ramen", Gifted: false}, 
+                                                                                {Name: "Meaty Stir Fry", Gifted: false}
+                                                                            ]},
+    {Name: 'Caleri', dailyGift: false, weeklyRomance: false, weeklyWants:  [
+                                                                                {Name: "Crystal Lake Lotus", Gifted: false}, 
+                                                                                {Name: "Pickled Carrots", Gifted: false}, 
+                                                                                {Name: "Cream of Tomato Soup", Gifted: false}, 
+                                                                                {Name: "Bouillabaisse", Gifted: false}
+                                                                            ]},
+    {Name: 'Chayne', dailyGift: false, weeklyRomance: false, weeklyWants:  [
+                                                                                {Name: "Tomato Plant Seed", Gifted: false}, 
+                                                                                {Name: "Pickled Tomatoes", Gifted: false}, 
+                                                                                {Name: "Heat Root", Gifted: false}, 
+                                                                                {Name: "Cream of Mushroom Soup", Gifted: false}
+                                                                            ]},
+    {Name: 'Delaila', dailyGift: false, weeklyRomance: false, weeklyWants: [
+                                                                                {Name: "Bahari Crab", Gifted: false}, 
+                                                                                {Name: "Kilima Catfish", Gifted: false}, 
+                                                                                {Name: "Iron Bar", Gifted: false}, 
+                                                                                {Name: "Gold Bar", Gifted: false}
+                                                                            ]},
+    {Name: 'Einar', dailyGift: false, weeklyRomance: false, weeklyWants:   [
+                                                                                {Name: "Mudminnow", Gifted: false}, 
+                                                                                {Name: "Garden Snail", Gifted: false}, 
+                                                                                {Name: "Glow Worm", Gifted: false}, 
+                                                                                {Name: "Enchanted Pupfish", Gifted: false}
+                                                                            ]},
+    {Name: 'Elouisa', dailyGift: false, weeklyRomance: false, weeklyWants: [
+                                                                                {Name: "Ship Fragments", Gifted: false}, 
+                                                                                {Name: "Bahari Bee", Gifted: false}, 
+                                                                                {Name: "Dragon's Beard Peat", Gifted: false}, 
+                                                                                {Name: "Ancient Amber Beetle", Gifted: false}
+                                                                            ]},
+    {Name: 'Eshe', dailyGift: false, weeklyRomance: false, weeklyWants:    [
+                                                                                {Name: "Leather", Gifted: false}, 
+                                                                                {Name: "Fish Stew", Gifted: false}, 
+                                                                                {Name: "Silver Bar", Gifted: false}, 
+                                                                                {Name: "Gold Ore", Gifted: false}
+                                                                            ]},
+    {Name: 'Hassian', dailyGift: false, weeklyRomance: false, weeklyWants: [
+                                                                                {Name: "Mountain Morel", Gifted: false}, 
+                                                                                {Name: "Striped Chapaa Tail", Gifted: false}, 
+                                                                                {Name: "Iron Ore", Gifted: false}, 
+                                                                                {Name: "Slowdown Arrow", Gifted: false}
+                                                                            ]},
+    {Name: 'Hekla', dailyGift: false, weeklyRomance: false, weeklyWants:   [
+                                                                                {Name: "Grilled Fish", Gifted: false}, 
+                                                                                {Name: "Painted Perch", Gifted: false}, 
+                                                                                {Name: "Chub", Gifted: false}, 
+                                                                                {Name: "Celebration Cake", Gifted: false}
+                                                                            ]},
+    {Name: 'Hodari', dailyGift: false, weeklyRomance: false, weeklyWants:  [
+                                                                                {Name: "Paper Lantern Bug", Gifted: false}, 
+                                                                                {Name: "Elder Sernuk Antlers", Gifted: false}, 
+                                                                                {Name: "Azure Chapaa Tail", Gifted: false}, 
+                                                                                {Name: "Spitfire Cicada", Gifted: false}
+                                                                            ]},
+    {Name: 'Jel', dailyGift: false, weeklyRomance: false, weeklyWants:     [
+                                                                                {Name: "Fur", Gifted: false}, 
+                                                                                {Name: "Albino Eel", Gifted: false}, 
+                                                                                {Name: "Gossamer Veil Moth", Gifted: false}, 
+                                                                                {Name: "Willow Lamprey", Gifted: false}
+                                                                            ]},
+    {Name: 'Jina', dailyGift: false, weeklyRomance: false, weeklyWants:    [
+                                                                                {Name: "Wagon Wheel", Gifted: false}, 
+                                                                                {Name: "Cotton Seed", Gifted: false}, 
+                                                                                {Name: "Mutated Angler", Gifted: false}, 
+                                                                                {Name: "Dari Cloves", Gifted: false}
+                                                                            ]},
+    {Name: 'Kenli', dailyGift: false, weeklyRomance: false, weeklyWants:   [
+                                                                                {Name: "Grilled Fish", Gifted: false}, 
+                                                                                {Name: "Fish Stew", Gifted: false}, 
+                                                                                {Name: "Trout Dinner", Gifted: false}, 
+                                                                                {Name: "Bouillabaisse", Gifted: false}
+                                                                            ]},
+    {Name: 'Kenyatta', dailyGift: false, weeklyRomance: false, weeklyWants:[
+                                                                                {Name: "Sernuk Antlers", Gifted: false}, 
+                                                                                {Name: "Inky Dragonfly", Gifted: false}, 
+                                                                                {Name: "Pinecone", Gifted: false}, 
+                                                                                {Name: "Meaty Stir Fry", Gifted: false}
+                                                                            ]},
+    {Name: 'Nai\'O', dailyGift: false, weeklyRomance: false, weeklyWants:  [
+                                                                                {Name: "Wagon Wheel", Gifted: false}, 
+                                                                                {Name: "HarvestBoost Fertilizer", Gifted: false}, 
+                                                                                {Name: "Stalking Catfish", Gifted: false}, 
+                                                                                {Name: "Steak Dinner", Gifted: false}
+                                                                            ]},
+    {Name: 'Najuma', dailyGift: false, weeklyRomance: false, weeklyWants:  [
+                                                                                {Name: "Flint", Gifted: false}, 
+                                                                                {Name: "Copper Bar", Gifted: false}, 
+                                                                                {Name: "Iron Ore", Gifted: false}, 
+                                                                                {Name: "Silver Bar", Gifted: false}
+                                                                            ]},
+    {Name: 'Reth', dailyGift: false, weeklyRomance: false, weeklyWants:    [
+                                                                                {Name: "Yellow Perch", Gifted: false}, 
+                                                                                {Name: "Hearty Vegetable Soup", Gifted: false}, 
+                                                                                {Name: "Apple", Gifted: false}, 
+                                                                                {Name: "Palian Onion Soup", Gifted: false}
+                                                                            ]},
+    {Name: 'Sifuu', dailyGift: false, weeklyRomance: false, weeklyWants:   [
+                                                                                {Name: "Copper Ore", Gifted: false}, 
+                                                                                {Name: "Oily Anchovy", Gifted: false}, 
+                                                                                {Name: "Proudhorned Sernuk Antlers", Gifted: false}, 
+                                                                                {Name: "Steak Dinner", Gifted: false}
+                                                                            ]},
+    {Name: 'Tamala', dailyGift: false, weeklyRomance: false, weeklyWants:  [
+                                                                                {Name: "Emerald Carpet Moss", Gifted: false}, 
+                                                                                {Name: "Garden Millipede", Gifted: false}, 
+                                                                                {Name: "Azure Stonehopper", Gifted: false}, 
+                                                                                {Name: "Ancient Amber Beetle", Gifted: false}
+                                                                            ]},
+    {Name: 'Tau', dailyGift: false, weeklyRomance: false, weeklyWants:     [
+                                                                                {Name: "Sapwood Plank", Gifted: false}, 
+                                                                                {Name: "Duskwing Butterfly", Gifted: false}, 
+                                                                                {Name: "Azure Stonehopper", Gifted: false}, 
+                                                                                {Name: "Grilled Meat", Gifted: false}
+                                                                            ]},
+    {Name: 'Tish', dailyGift: false, weeklyRomance: false, weeklyWants:    [
+                                                                                {Name: "Ship Fragments", Gifted: false}, 
+                                                                                {Name: "Samara", Gifted: false}, 
+                                                                                {Name: "Pearl", Gifted: false}, 
+                                                                                {Name: "Blueberry Pie", Gifted: false}
+                                                                            ]},
+    {Name: 'Zeki', dailyGift: false, weeklyRomance: false, weeklyWants:    [
+                                                                                {Name: "Grilled Fish", Gifted: false}, 
+                                                                                {Name: "Fish Stew", Gifted: false}, 
+                                                                                {Name: "Crab Gumbo", Gifted: false}, 
+                                                                                {Name: "Gold Bar", Gifted: false}
+                                                                            ]}
+], 
+localStorage,
+{ mergeDefaults: true }))
 
-// TODO: change to read from/write to file/database
-const villagers = ref([
-    { Name: 'Ashura', dailyGift: false, weeklyRomance: false, weeklyWants: ["Grilled Fish", "Samara", "Pinecone", "Sashimi"]},
-    { Name: 'Auni', dailyGift: false, weeklyRomance: false, weeklyWants: ["Common Blue Butterfly", "Garden Leafhopper", "Stripeshell Snail", "Apple Pie"]},
-    { Name: 'Badruu', dailyGift: false, weeklyRomance: false, weeklyWants: ["Potato Seed", "Corn Seed", "Ramen", "Meaty Stir Fry"]},
-    { Name: 'Caleri', dailyGift: false, weeklyRomance: false, weeklyWants: ["Crystal Lake Lotus", "Pickled Carrots", "Cream of Tomato Soup", "Bouillabaisse"]},
-    { Name: 'Chayne', dailyGift: false, weeklyRomance: false, weeklyWants: ["Tomato Plant Seed", "Pickled Tomatoes", "Heat Root", "Cream of Mushroom Soup"]},
-    { Name: 'Delaila', dailyGift: false, weeklyRomance: false, weeklyWants: ["Bahari Crab", "Kilima Catfish", "Iron Bar", "Gold Bar"]},
-    { Name: 'Einar', dailyGift: false, weeklyRomance: false, weeklyWants: ["Mudminnow", "Garden Snail", "Glow Worm", "Enchanted Pupfish"]},
-    { Name: 'Elouisa', dailyGift: false, weeklyRomance: false, weeklyWants: ["Ship Fragments", "Bahari Bee", "Dragon's Beard Peat", "Ancient Amber Beetle"]},
-    { Name: 'Eshe', dailyGift: false, weeklyRomance: false, weeklyWants: ["Leather", "Fish Stew", "Silver Bar", "Gold Ore"]},
-    { Name: 'Hassian', dailyGift: false, weeklyRomance: false, weeklyWants: ["Mountain Morel", "Striped Chapaa Tail", "Iron Ore", "Slowdown Arrow"]},
-    { Name: 'Hekla', dailyGift: false, weeklyRomance: false, weeklyWants: ["Grilled Fish", "Painted Perch", "Chub", "Celebration Cake"]},
-    { Name: 'Hodari', dailyGift: false, weeklyRomance: false, weeklyWants: ["Paper Lantern Bug", "Elder Sernuk Antlers", "Azure Chapaa Tail", "Spitfire Cicada"]},
-    { Name: 'Jel', dailyGift: false, weeklyRomance: false, weeklyWants: ["Fur", "Albino Eel", "Gossamer Veil Moth", "Willow Lamprey"]},
-    { Name: 'Jina', dailyGift: false, weeklyRomance: false, weeklyWants: ["Wagon Wheel", "Cotton Seed", "Mutated Angler", "Dari Cloves"]},
-    { Name: 'Kenli', dailyGift: false, weeklyRomance: false, weeklyWants: ["Grilled Fish", "Fish Stew", "Trout Dinner", "Bouillabaisse"]},
-    { Name: 'Kenyatta', dailyGift: false, weeklyRomance: false, weeklyWants: ["Sernuk Antlers", "Inky Dragonfly", "Pinecone", "Meaty Stir Fry"]},
-    { Name: 'Nai\'O', dailyGift: false, weeklyRomance: false, weeklyWants: ["Wagon Wheel", "HarvestBoost Fertilizer", "Stalking Catfish", "Steak Dinner"]},
-    { Name: 'Najuma', dailyGift: false, weeklyRomance: false, weeklyWants: ["Flint", "Copper Bar", "Iron Ore", "Silver Bar"]},
-    { Name: 'Reth', dailyGift: false, weeklyRomance: false, weeklyWants: ["Yellow Perch", "Hearty Vegetable Soup", "Apple", "Palian Onion Soup"]},
-    { Name: 'Sifuu', dailyGift: false, weeklyRomance: false, weeklyWants: ["Copper Ore", "Oily Anchovy", "Proudhorned Sernuk Antlers", "Steak Dinner"]},
-    { Name: 'Tamala', dailyGift: false, weeklyRomance: false, weeklyWants: ["Emerald Carpet Moss", "Garden Millipede", "Azure Stonehopper", "Ancient Amber Beetle"]},
-    { Name: 'Tau', dailyGift: false, weeklyRomance: false, weeklyWants: ["Sapwood Plank", "Duskwing Butterfly", "Azure Stonehopper", "Grilled Meat"]},
-    { Name: 'Tish', dailyGift: false, weeklyRomance: false, weeklyWants: ["Ship Fragments", "Samara", "Pearl", "Blueberry Pie"]},
-    { Name: 'Zeki', dailyGift: false, weeklyRomance: false, weeklyWants: ["Grilled Fish", "Fish Stew", "Crab Gumbo", "Gold Bar"]}
-])
+function updateVillager(villagerIndex, giftIndex) {
+    switch(giftIndex) {
+        case 0:
+            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s daily gift to ' + villagers.value[villagerIndex].dailyGift)
+            villagers.value[villagerIndex].dailyGift = !villagers.value[villagerIndex].dailyGift
+            break;
+        case 1:
+            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s weekly romance to ' + villagers.value[villagerIndex].weeklyRomance)
+            villagers.value[villagerIndex].weeklyRomance = !villagers.value[villagerIndex].weeklyRomance
+            break;
+        default:
+            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s wanted gift: ' + villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Name + ' to ' + villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted)
+            villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted = !villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted
+            break;
+    }
+    localStorage.setItem('Villagers', villagers)
+}
 
 </script>
