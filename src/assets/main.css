@@ -21,6 +21,23 @@ a,
   transition: 0.4s;
 }
 
+table {
+  border: 1px solid;
+  text-align: center;
+}
+th {
+  border: 1px solid;
+  background-color: hsla(210, 100%, 70%);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+td {
+  border: 1px solid;
+  padding: 10px;
+}
+tr:hover {background-color: hsla(210, 100%, 70%)}
+
 @media (hover: hover) {
   a:hover {
     background-color: hsla(160, 100%, 37%, 0.2);
