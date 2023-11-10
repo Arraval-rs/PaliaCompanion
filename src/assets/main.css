@@ -1,13 +1,5 @@
 @import './base.css';
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
-}
-
 a,
 .green {
   text-decoration: none;
@@ -29,6 +21,21 @@ a,
 .button {
   background-color:  var(--button-white);
   opacity: 1;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #333;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+}
+
+.main {
+  margin-top: 100px;
+  overflow-y: scroll;
+  height: 400px;
+  /*display: grid;*/
 }
 
 table {
@@ -58,11 +65,5 @@ tr:hover {background-color: var(--color-background-mute)}
   body {
     display: flex;
     place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
   }
 }
