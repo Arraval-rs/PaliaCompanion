@@ -31,7 +31,7 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue';
+import { ref } from 'vue';
 import { useStorage } from '@vueuse/core'
 import VillagerRow from './Villager.vue';
 
