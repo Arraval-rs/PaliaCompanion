@@ -5,48 +5,46 @@
 			{{villager.Name}}
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 0)">
+			<button @click="$emit('gifted', villagerIndex, 0)" :class="{'button': !villager.dailyGift, 'clicked': villager.dailyGift}">
 				<img src="../assets/Gifting.webp" alt="../assets/Gifting.webp" width="75" height="75">
 			</button>
-			<input type="checkbox" :checked="villager.dailyGift">
+			<br>
+			Daily Gift
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 1)">
+			<button @click="$emit('gifted', villagerIndex, 1)" :class="{'button': !villager.weeklyRomance, 'clicked': villager.weeklyRomance}">
 				<img src="../assets/Items/Box of Chocolates.webp" alt="../assets/Items/Box of Chocolates.webp" width="75" height="75">
 			</button>
-			<input type="checkbox" :checked="villager.weeklyRomance">
+			<br>
+			Weekly Romance
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 2)">
+			<button @click="$emit('gifted', villagerIndex, 2)" :class="{'button': !villager.weeklyWants[0].Gifted, 'clicked': villager.weeklyWants[0].Gifted}">
 				<img :src="wantImage(villager.weeklyWants[0].Name)" :alt="wantImage(villager.weeklyWants[0].Name)" width="75" height="75">
 			</button>
 			<br>
 			{{villager.weeklyWants[0].Name}}
-			<input type="checkbox" :checked="villager.weeklyWants[0].Gifted">
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 3)">
+			<button @click="$emit('gifted', villagerIndex, 3)" :class="{'button': !villager.weeklyWants[1].Gifted, 'clicked': villager.weeklyWants[1].Gifted}">
 				<img :src="wantImage(villager.weeklyWants[1].Name)" :alt="wantImage(villager.weeklyWants[1].Name)" width="75" height="75">
 			</button>
 			<br>
 			{{villager.weeklyWants[1].Name}}
-			<input type="checkbox" :checked="villager.weeklyWants[1].Gifted">
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 4)">
+			<button @click="$emit('gifted', villagerIndex, 4)" :class="{'button': !villager.weeklyWants[2].Gifted, 'clicked': villager.weeklyWants[2].Gifted}">
 				<img :src="wantImage(villager.weeklyWants[2].Name)" :alt="wantImage(villager.weeklyWants[2].Name)" width="75" height="75">
 			</button>
 			<br>
 			{{villager.weeklyWants[2].Name}}
-			<input type="checkbox" :checked="villager.weeklyWants[2].Gifted">
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 5)">
+			<button @click="$emit('gifted', villagerIndex, 5)" :class="{'button': !villager.weeklyWants[3].Gifted, 'clicked': villager.weeklyWants[3].Gifted}">
 				<img :src="wantImage(villager.weeklyWants[3].Name)" :alt="wantImage(villager.weeklyWants[3].Name)" width="75" height="75">
 			</button>
 			<br>
 			{{villager.weeklyWants[3].Name}}
-			<input type="checkbox" :checked="villager.weeklyWants[3].Gifted">
 		</td>
 	</tr>
 </template>

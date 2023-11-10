@@ -21,13 +21,23 @@ a,
   transition: 0.4s;
 }
 
+.clicked {
+  background-color: var(--color-background-mute);
+  opacity: 0.25;
+}
+
+.button {
+  background-color:  var(--button-white);
+  opacity: 1;
+}
+
 table {
   border: 1px solid;
   text-align: center;
 }
 th {
   border: 1px solid;
-  background-color: hsla(210, 100%, 70%);
+  background-color: var(--palia-blue);
   color: white;
   position: sticky;
   top: 0;
@@ -36,7 +46,7 @@ td {
   border: 1px solid;
   padding: 10px;
 }
-tr:hover {background-color: hsla(210, 100%, 70%)}
+tr:hover {background-color: var(--color-background-mute)}
 
 @media (hover: hover) {
   a:hover {

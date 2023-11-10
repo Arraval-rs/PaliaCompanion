@@ -8,16 +8,24 @@
         </q-toolbar-title>
     </div>
     <div>
-        <label for="users">Select a User: </label>
-        <select name="users" id="users">
-            <option value="april">April</option>
-            <option value="cody">Cody</option>
-        </select>
+        <button @click="clearVillagers">
+            Reset Villagers
+        </button>
+        <button @click="clearStorage">
+            Clear Local Storage
+        </button>
     </div>
     <div id="app">
-        <h3 class="p-3 text-center">Villager Weekly Wants</h3>
+        <h3 class="p-3 text-center"></h3>
         <br>
         <table>
+            <thead>
+                <tr>
+                    <th id="tophead" colspan="7">
+                        Villager Weekly Wants
+                    </th>
+                </tr>
+            </thead>
             <thead>
                 <tr>
                     <th>NPC</th>
@@ -206,6 +214,21 @@ function updateVillager(villagerIndex, giftIndex) {
             break;
     }
     localStorage.setItem('Villagers', villagers)
+}
+
+function clearVillagers() {
+    for(let i = 0; i < villagers.value.length; i++) {
+        villagers.value[i].dailyGift = false
+        villagers.value[i].weeklyRomance = false
+        for(let j = 0; j < villagers.value[i].weeklyWants.length; j++) {
+            villagers.value[i].weeklyWants[j].Gifted = false
+        }
+    }
+}
+
+function clearStorage() {
+    villagers.value = null
+    location.reload()
 }
 
 </script>
