@@ -44,7 +44,6 @@
 		const now = new Date()
 		const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 1, 30)
 		const nextReset = (target - now) % (1000 * 60 * 60 * 24) // difference mod 1 day
-		console.log('Current: ' + now + '\nTarget: ' + target + '\nDifference: ' + nextReset + '\nDate of diff: ' + new Date(nextReset))
 		dailyCountdown.value = nextReset
 		dailyKey.value++
 		console.log('Daily timer reset with new key ' + dailyKey.value + ' and time ' + nextReset)

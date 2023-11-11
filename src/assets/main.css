@@ -13,14 +13,14 @@ a,
   transition: 0.4s;
 }
 
-.clicked {
-  background-color: var(--color-background-mute);
-  opacity: 0.25;
-}
-
 .button {
   background-color:  var(--button-white);
   opacity: 1;
+}
+
+.clicked {
+  background-color: var(--color-background-mute);
+  opacity: 0.25;
 }
 
 .header {

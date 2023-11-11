@@ -1,27 +1,29 @@
 <template>
     <div>
         <header class="header">
-            <q-avatar>
-                <img src="./assets/Logo.webp" width="75" height="53">
-                Companion
-            </q-avatar>
+            <button class="drawerButton">
+                <img src="./assets/Logo.webp" :width="75" :height="53">   
+            </button>
+            Companion
             <CountdownTimer @weeklyReset="resetWeeklies" @dailyReset="resetDailies"/>
         </header>
-        <div class="main">
-            <WeeklyWants ref="weeklyWantsRef"/>
+        <div>
+            <div class="main">
+                <WeeklyWants ref="weeklyWantsRef"/>
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
-    import { ref } from 'vue'
+    import { ref, computed } from 'vue'
     import WeeklyWants from './components/WeeklyWants.vue'
     import CountdownTimer from './components/CountdownTimer.vue'
 
+    // need to pair to additional console logs and pass to child component props
     const debug = false
 
-    var w = ref(window.innerWidth)
-    var h = ref(window.innerHeight)
+    // child component refs
     const weeklyWantsRef = ref(null)
 
     function resetDailies() {
