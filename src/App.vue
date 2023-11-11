@@ -5,10 +5,10 @@
                 <img src="./assets/Logo.webp" width="75" height="53">
                 Companion
             </q-avatar>
-            <CountdownTimer/>
+            <CountdownTimer @weeklyReset="resetWeeklies" @dailyReset="resetDailies"/>
         </header>
         <div class="main">
-            <WeeklyWants/>
+            <WeeklyWants ref="weeklyWantsRef"/>
         </div>
     </div>
 </template>
@@ -20,4 +20,13 @@
 
     var w = ref(window.innerWidth)
     var h = ref(window.innerHeight)
+    const weeklyWantsRef = ref(null)
+
+    function resetDailies() {
+        weeklyWantsRef.value.clearDailyGifts()
+    }
+
+    function resetWeeklies() {
+        weeklyWantsRef.value.clearVillagers()
+    }
 </script>

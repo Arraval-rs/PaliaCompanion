@@ -187,15 +187,15 @@ localStorage,
 function updateVillager(villagerIndex, giftIndex) {
     switch(giftIndex) {
         case 0:
-            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s daily gift to ' + villagers.value[villagerIndex].dailyGift)
+            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s daily gift to ' + !villagers.value[villagerIndex].dailyGift)
             villagers.value[villagerIndex].dailyGift = !villagers.value[villagerIndex].dailyGift
             break;
         case 1:
-            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s weekly romance to ' + villagers.value[villagerIndex].weeklyRomance)
+            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s weekly romance to ' + !villagers.value[villagerIndex].weeklyRomance)
             villagers.value[villagerIndex].weeklyRomance = !villagers.value[villagerIndex].weeklyRomance
             break;
         default:
-            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s wanted gift: ' + villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Name + ' to ' + villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted)
+            console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s wanted gift: ' + villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Name + ' to ' + !villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted)
             villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted = !villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted
             break;
     }
@@ -212,9 +212,20 @@ function clearVillagers() {
     }
 }
 
+function clearDailyGifts() {
+    for(let i = 0; i < villagers.value.length; i++) {
+        villagers.value[i].dailyGift = false
+    }
+}
+
 function clearStorage() {
     villagers.value = null
     location.reload()
 }
+
+defineExpose({
+    clearVillagers,
+    clearDailyGifts
+})
 
 </script>
