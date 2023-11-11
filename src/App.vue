@@ -1,18 +1,32 @@
 <template>
     <div>
-        <header class="header">
-            <button class="drawerButton">
-                <img src="./assets/Logo.webp" :width="75" :height="53">   
-            </button>
-            Companion
-            <CountdownTimer @weeklyReset="resetWeeklies" @dailyReset="resetDailies"/>
-        </header>
-        <div>
-            <div class="main">
-                <WeeklyWants ref="weeklyWantsRef"/>
-            </div>
-        </div>
+        <v-toolbar>
+            <v-app-bar-nav-icon></v-app-bar-nav-icon>
+            <img src="./assets/Logo.webp" :width="75" :height="53">
+            <v-toolbar-title>Palia Companion</v-toolbar-title>
+            <CountdownTimer @weeklyReset="resetVillagers" @dailyReset="resetDailies"/>
+        </v-toolbar>
     </div>
+    <div style="height: 600px">
+        <v-card class="card">
+            <v-card-title>
+                Villager Weekly Wants
+            </v-card-title>
+            <v-card-text class="card-text">
+                <div>
+                    <WeeklyWants ref="weeklyWantsRef"/>
+                </div>
+            </v-card-text>
+            <v-card-actions>
+                <v-btn @click="resetVillagers">
+                    Reset Villagers
+                </v-btn>
+                <v-btn @click="clearStorage">
+                    Clear Local Storage
+                </v-btn>
+            </v-card-actions>
+        </v-card>
+    </div> 
 </template>
 
 <script setup>
@@ -31,8 +45,12 @@
         console.log('Cleared daily gifts')
     }
 
-    function resetWeeklies() {
+    function resetVillagers() {
         weeklyWantsRef.value.clearVillagers()
         console.log('Cleared weekly gifts')
+    }
+
+    function clearStorage() {
+        weeklyWantsRef.value.clearStorage()
     }
 </script>

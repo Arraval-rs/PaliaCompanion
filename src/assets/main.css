@@ -1,18 +1,5 @@
 @import './base.css';
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-.blue {
-  text-decoration: none;
-  color: hsla(210, 100%, 70%);
-  transition: 0.4s;
-}
-
 .button {
   background-color:  var(--button-white);
   opacity: 1;
@@ -23,19 +10,28 @@ a,
   opacity: 0.25;
 }
 
-.header {
+/*.header {
   overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
   background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+}*/
+
+.card {
+  width: 60%;
+  height: 80%;
+  overflow: hidden;
+  position:  relative;
 }
 
-.main {
-  margin-top: 100px;
-  overflow-y: scroll;
-  height: 800px;
-  /*display: grid;*/
+.card-text {
+  overflow-y: auto;
+  height: 80%;
+  width:  100%;
+  //position:  absolute;
+  right: 0;
+  top: 0;
 }
 
 table {
@@ -54,16 +50,3 @@ td {
   padding: 10px;
 }
 tr:hover {background-color: var(--color-background-mute)}
-
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
-}
-
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-}
