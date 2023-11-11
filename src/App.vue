@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-    import { ref, onMounted } from 'vue'
+    import { ref } from 'vue'
     import WeeklyWants from './components/WeeklyWants.vue'
     import CountdownTimer from './components/CountdownTimer.vue'
 

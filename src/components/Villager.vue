@@ -2,6 +2,7 @@
 	<tr>
 		<td>
 			<img :src="villagerImage" :alt="villagerImage" width="75" height="75">
+			<br>
 			{{villager.Name}}
 		</td>
 		<td>
