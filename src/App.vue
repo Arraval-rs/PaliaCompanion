@@ -18,15 +18,19 @@
     import WeeklyWants from './components/WeeklyWants.vue'
     import CountdownTimer from './components/CountdownTimer.vue'
 
+    const debug = false
+
     var w = ref(window.innerWidth)
     var h = ref(window.innerHeight)
     const weeklyWantsRef = ref(null)
 
     function resetDailies() {
         weeklyWantsRef.value.clearDailyGifts()
+        console.log('Cleared daily gifts')
     }
 
     function resetWeeklies() {
         weeklyWantsRef.value.clearVillagers()
+        console.log('Cleared weekly gifts')
     }
 </script>
