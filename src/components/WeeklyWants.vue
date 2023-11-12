@@ -1,18 +1,5 @@
 <template>
-	<button @click="clearVillagers">
-        Reset Villagers
-    </button>
-    <button @click="clearStorage">
-        Clear Local Storage
-    </button>
     <table>
-        <thead>
-            <tr>
-                <th id="tophead" colspan="7">
-                    Villager Weekly Wants
-                </th>
-            </tr>
-        </thead>
         <thead>
             <tr>
                 <th>NPC</th>
@@ -225,7 +212,8 @@ function clearStorage() {
 
 defineExpose({
     clearVillagers,
-    clearDailyGifts
+    clearDailyGifts,
+    clearStorage
 })
 
 </script>

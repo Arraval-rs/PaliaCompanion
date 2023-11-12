@@ -1,49 +1,88 @@
 @import './base.css';
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-}
-
-.blue {
-  text-decoration: none;
-  color: hsla(210, 100%, 70%);
-  transition: 0.4s;
-}
-
-.button {
+.image-button {
   background-color:  var(--button-white);
   opacity: 1;
+  border-radius: 10px;
+  margin: 10px 0px 0px 0px;
 }
 
-.clicked {
+.image-button-clicked {
   background-color: var(--color-background-mute);
   opacity: 0.25;
+  border-radius: 10px;
+  margin: 10px 0px 0px 0px;
+}
+
+.portrait {
+  width: 75px;
+  height: 75px;
+  margin: 10px 0px 0px 0px;
 }
 
 .header {
-  overflow: hidden;
-  background-color: #333;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 100%; /* Full width */
+  background-color: var(--color-background-soft) !important;
 }
 
-.main {
-  margin-top: 100px;
-  overflow-y: scroll;
-  height: 800px;
-  /*display: grid;*/
+.header-item {
+  color: var(--vt-c-white-soft) !important;
+  margin: 5px;
+}
+
+.card {
+  width: 60%;
+  height: 85%;
+  overflow: hidden;
+  position: relative;
+}
+
+.card-title {
+  height: 10%;
+  font-size: 30px !important;
+  background-color: var(--color-background);
+  color: var(--vt-c-white-soft);
+}
+
+.card-subtitle {
+  background-color: var(--color-background);
+  color: var(--vt-c-white-soft);
+}
+
+.card-text {
+  overflow-y: auto;
+  height: 80%;
+  width:  100%;
+  right: 0;
+  top: 0;
+  background-color: var(--color-background);
+  color: var(--vt-c-white-soft);
+}
+
+.card-actions {
+  height:  10%;
+  background-color: var(--color-background-soft);
+  color: var(--vt-c-white-soft);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 94%;
 }
 
 table {
   border: 1px solid;
+  border-color: var(--vt-c-white-soft);
+  border-radius: 5px;
   text-align: center;
+  width: 100%;
+  table-layout: fixed;
 }
 th {
   border: 1px solid;
+  border-radius: 5px;
+  border-color: var(--vt-c-white-soft);
   background-color: var(--palia-blue);
   color: white;
   position: sticky;
@@ -51,19 +90,20 @@ th {
 }
 td {
   border: 1px solid;
+  border-color: var(--vt-c-white-soft);
   padding: 10px;
+  vertical-align: top;
 }
 tr:hover {background-color: var(--color-background-mute)}
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.table-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.main {
+  height: 100vh;
+  //overflow: hidden;
 }

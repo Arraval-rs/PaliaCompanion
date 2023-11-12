@@ -1,17 +1,33 @@
 <template>
-    <div>
-        <header class="header">
-            <button class="drawerButton">
-                <img src="./assets/Logo.webp" :width="75" :height="53">   
-            </button>
-            Companion
-            <CountdownTimer @weeklyReset="resetWeeklies" @dailyReset="resetDailies"/>
-        </header>
+    <div class="main">
         <div>
-            <div class="main">
-                <WeeklyWants ref="weeklyWantsRef"/>
-            </div>
+            <v-toolbar class="header">
+                <v-app-bar-nav-icon class="header-item"></v-app-bar-nav-icon>
+                <img src="./assets/Logo.png" :width="100" :height="60">
+                <v-toolbar-title class="header-item">Palia Companion</v-toolbar-title>
+                <CountdownTimer class="header-item" @weeklyReset="resetVillagers" @dailyReset="resetDailies"/>
+            </v-toolbar>
         </div>
+        <div class="flex-container">
+            <v-card class="card">
+                <v-card-title class="card-title">
+                    Villager Weekly Wants
+                </v-card-title>
+                <v-card-text class="card-text">
+                    <div>
+                        <WeeklyWants ref="weeklyWantsRef"/>
+                    </div>
+                </v-card-text>
+                <v-card-actions class="card-actions">
+                    <v-btn variant="tonal" @click="resetVillagers">
+                        Reset Villagers
+                    </v-btn>
+                    <v-btn variant="tonal" @click="clearStorage">
+                        Clear Local Storage
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </div> 
     </div>
 </template>
 
@@ -31,8 +47,12 @@
         console.log('Cleared daily gifts')
     }
 
-    function resetWeeklies() {
+    function resetVillagers() {
         weeklyWantsRef.value.clearVillagers()
         console.log('Cleared weekly gifts')
+    }
+
+    function clearStorage() {
+        weeklyWantsRef.value.clearStorage()
     }
 </script>
