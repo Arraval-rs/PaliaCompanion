@@ -5,8 +5,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "prepreview": "npm run build && npm run copyItems && npm run copyVillagers",
     "preview": "vite preview",
-    "lint": "eslint . --fix --ignore-path .gitignore"
+    "lint": "eslint . --fix --ignore-path .gitignore",
+    "copyItems": "node -e \"require('fs').cpSync('./src/assets/Items', './dist/assets/Items', {recursive: true});\"",
+    "copyVillagers": "node -e \"require('fs').cpSync('./src/assets/Villagers', './dist/assets/Villagers', {recursive: true});\"",
+    "predeploy": "npm run build && npm run copyItems && npm run copyVillagers",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "@chenfengyuan/vue-countdown": "^2.1.2",
@@ -22,6 +27,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "eslint": "^8.37.0",
     "eslint-plugin-vue": "^9.3.0",
+    "gh-pages": "^6.0.0",
     "sass": "^1.60.0",
     "unplugin-fonts": "^1.0.3",
     "vite": "^4.2.0",
