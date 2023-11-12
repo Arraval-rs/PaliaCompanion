@@ -1,32 +1,34 @@
 <template>
-    <div>
-        <v-toolbar>
-            <v-app-bar-nav-icon></v-app-bar-nav-icon>
-            <img src="./assets/Logo.webp" :width="75" :height="53">
-            <v-toolbar-title>Palia Companion</v-toolbar-title>
-            <CountdownTimer @weeklyReset="resetVillagers" @dailyReset="resetDailies"/>
-        </v-toolbar>
+    <div class="main">
+        <div>
+            <v-toolbar class="header">
+                <v-app-bar-nav-icon class="header-item"></v-app-bar-nav-icon>
+                <img src="./assets/Logo.png" :width="100" :height="60">
+                <v-toolbar-title class="header-item">Palia Companion</v-toolbar-title>
+                <CountdownTimer class="header-item" @weeklyReset="resetVillagers" @dailyReset="resetDailies"/>
+            </v-toolbar>
+        </div>
+        <div class="flex-container">
+            <v-card class="card">
+                <v-card-title class="card-title">
+                    Villager Weekly Wants
+                </v-card-title>
+                <v-card-text class="card-text">
+                    <div>
+                        <WeeklyWants ref="weeklyWantsRef"/>
+                    </div>
+                </v-card-text>
+                <v-card-actions class="card-actions">
+                    <v-btn variant="tonal" @click="resetVillagers">
+                        Reset Villagers
+                    </v-btn>
+                    <v-btn variant="tonal" @click="clearStorage">
+                        Clear Local Storage
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </div> 
     </div>
-    <div style="height: 600px">
-        <v-card class="card">
-            <v-card-title>
-                Villager Weekly Wants
-            </v-card-title>
-            <v-card-text class="card-text">
-                <div>
-                    <WeeklyWants ref="weeklyWantsRef"/>
-                </div>
-            </v-card-text>
-            <v-card-actions>
-                <v-btn @click="resetVillagers">
-                    Reset Villagers
-                </v-btn>
-                <v-btn @click="clearStorage">
-                    Clear Local Storage
-                </v-btn>
-            </v-card-actions>
-        </v-card>
-    </div> 
 </template>
 
 <script setup>

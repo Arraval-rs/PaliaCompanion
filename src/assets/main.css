@@ -1,45 +1,86 @@
 @import './base.css';
 
-.button {
+.image-button {
   background-color:  var(--button-white);
   opacity: 1;
+  border-radius: 10px;
+  margin: 10px 0px 0px 0px;
 }
 
-.clicked {
+.image-button-clicked {
   background-color: var(--color-background-mute);
   opacity: 0.25;
+  border-radius: 10px;
+  margin: 10px 0px 0px 0px;
 }
 
-/*.header {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: #333;
-}*/
+.portrait {
+  width: 75px;
+  height: 75px;
+  margin: 10px 0px 0px 0px;
+}
+
+.header {
+  background-color: var(--color-background-soft) !important;
+}
+
+.header-item {
+  color: var(--vt-c-white-soft) !important;
+  margin: 5px;
+}
 
 .card {
   width: 60%;
-  height: 80%;
+  height: 85%;
   overflow: hidden;
-  position:  relative;
+  position: relative;
+}
+
+.card-title {
+  height: 10%;
+  font-size: 30px !important;
+  background-color: var(--color-background);
+  color: var(--vt-c-white-soft);
+}
+
+.card-subtitle {
+  background-color: var(--color-background);
+  color: var(--vt-c-white-soft);
 }
 
 .card-text {
   overflow-y: auto;
   height: 80%;
   width:  100%;
-  //position:  absolute;
   right: 0;
   top: 0;
+  background-color: var(--color-background);
+  color: var(--vt-c-white-soft);
+}
+
+.card-actions {
+  height:  10%;
+  background-color: var(--color-background-soft);
+  color: var(--vt-c-white-soft);
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 90%;
 }
 
 table {
   border: 1px solid;
+  border-color: var(--vt-c-white-soft);
+  border-radius: 5px;
   text-align: center;
 }
 th {
   border: 1px solid;
+  border-radius: 5px;
+  border-color: var(--vt-c-white-soft);
   background-color: var(--palia-blue);
   color: white;
   position: sticky;
@@ -47,6 +88,20 @@ th {
 }
 td {
   border: 1px solid;
+  border-color: var(--vt-c-white-soft);
   padding: 10px;
+  vertical-align: top;
 }
 tr:hover {background-color: var(--color-background-mute)}
+
+.table-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+.main {
+  height: 100vh;
+  //overflow: hidden;
+}

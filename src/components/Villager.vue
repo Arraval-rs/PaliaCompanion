@@ -1,51 +1,62 @@
 <template>
 	<tr>
 		<td>
-			<img :src="villagerImage" :alt="villagerImage" width="75" height="75">
-			<br>
-			{{villager.Name}}
+			<img class="portrait" :src="villagerImage" :alt="villagerImage" width="75" height="75">
+			<div class="table-text">
+				{{villager.Name}}
+			</div>
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 0)" :class="{'button': !villager.dailyGift, 'clicked': villager.dailyGift}">
-				<img src="../assets/Gifting.webp" alt="../assets/Gifting.webp" width="75" height="75">
-			</button>
-			<br>
-			Daily Gift
+			<div>
+				<button @click="$emit('gifted', villagerIndex, 0)" :class="{'image-button': !villager.dailyGift, 'image-button-clicked': villager.dailyGift}">
+					<img src="../assets/Gifting.webp" alt="../assets/Gifting.webp" width="75" height="75">
+				</button>
+			</div>
+			<div class="table-text">
+				Daily Gift
+			</div>
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 1)" :class="{'button': !villager.weeklyRomance, 'clicked': villager.weeklyRomance}">
-				<img src="../assets/Items/Box of Chocolates.webp" alt="../assets/Items/Box of Chocolates.webp" width="75" height="75">
-			</button>
-			<br>
-			Weekly Romance
+			<div>
+				<button @click="$emit('gifted', villagerIndex, 1)" :class="{'image-button': !villager.weeklyRomance, 'image-button-clicked': villager.weeklyRomance}">
+					<img src="../assets/Items/Box of Chocolates.webp" alt="../assets/Items/Box of Chocolates.webp" width="75" height="75">
+				</button>
+			</div>
+			<div class="table-text">
+				Weekly Romance
+			</div>
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 2)" :class="{'button': !villager.weeklyWants[0].Gifted, 'clicked': villager.weeklyWants[0].Gifted}">
+			<button @click="$emit('gifted', villagerIndex, 2)" :class="{'image-button': !villager.weeklyWants[0].Gifted, 'image-button-clicked': villager.weeklyWants[0].Gifted}">
 				<img :src="wantImage(villager.weeklyWants[0].Name)" :alt="wantImage(villager.weeklyWants[0].Name)" width="75" height="75">
 			</button>
-			<br>
-			{{villager.weeklyWants[0].Name}}
+			<div class="table-text">
+				{{villager.weeklyWants[0].Name}}
+			</div>
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 3)" :class="{'button': !villager.weeklyWants[1].Gifted, 'clicked': villager.weeklyWants[1].Gifted}">
+			<button @click="$emit('gifted', villagerIndex, 3)" :class="{'image-button': !villager.weeklyWants[1].Gifted, 'image-button-clicked': villager.weeklyWants[1].Gifted}">
 				<img :src="wantImage(villager.weeklyWants[1].Name)" :alt="wantImage(villager.weeklyWants[1].Name)" width="75" height="75">
 			</button>
-			<br>
-			{{villager.weeklyWants[1].Name}}
+			<div class="table-text">
+				{{villager.weeklyWants[1].Name}}
+			</div>
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 4)" :class="{'button': !villager.weeklyWants[2].Gifted, 'clicked': villager.weeklyWants[2].Gifted}">
+			<button @click="$emit('gifted', villagerIndex, 4)" :class="{'image-button': !villager.weeklyWants[2].Gifted, 'image-button-clicked': villager.weeklyWants[2].Gifted}">
 				<img :src="wantImage(villager.weeklyWants[2].Name)" :alt="wantImage(villager.weeklyWants[2].Name)" width="75" height="75">
 			</button>
-			<br>
-			{{villager.weeklyWants[2].Name}}
+			<div class="table-text">
+				{{villager.weeklyWants[2].Name}}
+			</div>
 		</td>
 		<td>
-			<button @click="$emit('gifted', villagerIndex, 5)" :class="{'button': !villager.weeklyWants[3].Gifted, 'clicked': villager.weeklyWants[3].Gifted}">
+			<button @click="$emit('gifted', villagerIndex, 5)" :class="{'image-button': !villager.weeklyWants[3].Gifted, 'image-button-clicked': villager.weeklyWants[3].Gifted}">
 				<img :src="wantImage(villager.weeklyWants[3].Name)" :alt="wantImage(villager.weeklyWants[3].Name)" width="75" height="75">
 			</button>
-			<br>
-			{{villager.weeklyWants[3].Name}}
+			<div class="table-text">
+				{{villager.weeklyWants[3].Name}}
+			</div>
 		</td>
 	</tr>
 </template>
