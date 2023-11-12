@@ -9,7 +9,7 @@
 		<td>
 			<div>
 				<button @click="$emit('gifted', villagerIndex, 0)" :class="{'image-button': !villager.dailyGift, 'image-button-clicked': villager.dailyGift}">
-					<img src="../assets/Gifting.webp" alt="../assets/Gifting.webp" width="75" height="75">
+					<img src="../assets/Gifting.webp" alt="Gifting.webp" width="75" height="75">
 				</button>
 			</div>
 			<div class="table-text">
@@ -19,7 +19,7 @@
 		<td>
 			<div>
 				<button @click="$emit('gifted', villagerIndex, 1)" :class="{'image-button': !villager.weeklyRomance, 'image-button-clicked': villager.weeklyRomance}">
-					<img src="../assets/Items/Box of Chocolates.webp" alt="../assets/Items/Box of Chocolates.webp" width="75" height="75">
+					<img src="../assets/Items/Box of Chocolates.webp" alt="Box of Chocolates.webp" width="75" height="75">
 				</button>
 			</div>
 			<div class="table-text">
@@ -28,7 +28,7 @@
 		</td>
 		<td>
 			<button @click="$emit('gifted', villagerIndex, 2)" :class="{'image-button': !villager.weeklyWants[0].Gifted, 'image-button-clicked': villager.weeklyWants[0].Gifted}">
-				<img :src="wantImage(villager.weeklyWants[0].Name)" :alt="wantImage(villager.weeklyWants[0].Name)" width="75" height="75">
+				<img :src="wantItem[0]" :alt="props.villager.weeklyWants[0].Name" width="75" height="75">
 			</button>
 			<div class="table-text">
 				{{villager.weeklyWants[0].Name}}
@@ -36,7 +36,7 @@
 		</td>
 		<td>
 			<button @click="$emit('gifted', villagerIndex, 3)" :class="{'image-button': !villager.weeklyWants[1].Gifted, 'image-button-clicked': villager.weeklyWants[1].Gifted}">
-				<img :src="wantImage(villager.weeklyWants[1].Name)" :alt="wantImage(villager.weeklyWants[1].Name)" width="75" height="75">
+				<img :src="wantItem[1]" :alt="props.villager.weeklyWants[1].Name" width="75" height="75">
 			</button>
 			<div class="table-text">
 				{{villager.weeklyWants[1].Name}}
@@ -44,7 +44,7 @@
 		</td>
 		<td>
 			<button @click="$emit('gifted', villagerIndex, 4)" :class="{'image-button': !villager.weeklyWants[2].Gifted, 'image-button-clicked': villager.weeklyWants[2].Gifted}">
-				<img :src="wantImage(villager.weeklyWants[2].Name)" :alt="wantImage(villager.weeklyWants[2].Name)" width="75" height="75">
+				<img :src="wantItem[2]" :alt="props.villager.weeklyWants[2].Name" width="75" height="75">
 			</button>
 			<div class="table-text">
 				{{villager.weeklyWants[2].Name}}
@@ -52,7 +52,7 @@
 		</td>
 		<td>
 			<button @click="$emit('gifted', villagerIndex, 5)" :class="{'image-button': !villager.weeklyWants[3].Gifted, 'image-button-clicked': villager.weeklyWants[3].Gifted}">
-				<img :src="wantImage(villager.weeklyWants[3].Name)" :alt="wantImage(villager.weeklyWants[3].Name)" width="75" height="75">
+				<img :src="wantItem[3]" :alt="props.villager.weeklyWants[3].Name" width="75" height="75">
 			</button>
 			<div class="table-text">
 				{{villager.weeklyWants[3].Name}}
@@ -69,11 +69,12 @@
 		villagerIndex: Number
 	})
 
-	const villagerImage = computed(() => {
-		return './src/assets/Villagers/' + props.villager.Name + '.webp'
-	})
+	const villagerImage = new URL('../assets/Villagers/' + props.villager.Name + '.webp', import.meta.url).href
 
-	function wantImage(item) {
-		return './src/assets/Items/' + item + '.webp'
-	}
+	const wantItem = [
+		new URL('../assets/Items/' + props.villager.weeklyWants[0].Name + '.webp', import.meta.url).href,
+		new URL('../assets/Items/' + props.villager.weeklyWants[1].Name + '.webp', import.meta.url).href,
+		new URL('../assets/Items/' + props.villager.weeklyWants[2].Name + '.webp', import.meta.url).href,
+		new URL('../assets/Items/' + props.villager.weeklyWants[3].Name + '.webp', import.meta.url).href
+	]
 </script>
