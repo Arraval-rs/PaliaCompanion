@@ -180,10 +180,12 @@ function updateVillager(villagerIndex, giftIndex) {
         case 1:
             console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s weekly romance to ' + !villagers.value[villagerIndex].weeklyRomance)
             villagers.value[villagerIndex].weeklyRomance = !villagers.value[villagerIndex].weeklyRomance
+            villagers.value[villagerIndex].dailyGift = villagers.value[villagerIndex].weeklyRomance
             break;
         default:
             console.log('Updating ' + villagers.value[villagerIndex].Name + '\'s wanted gift: ' + villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Name + ' to ' + !villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted)
             villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted = !villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted
+            villagers.value[villagerIndex].dailyGift = villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted
             break;
     }
     localStorage.setItem('Villagers', villagers)

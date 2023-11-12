@@ -29,6 +29,15 @@
   margin: 5px;
 }
 
+.header-card {
+  width: 28%;
+  height: 60%;
+  overflow: hidden;
+  position: absolute;
+  background-color: var(--color-background-soft) !important;
+  color: var(--vt-c-white-soft) !important;
+}
+
 .card {
   width: 60%;
   height: 85%;

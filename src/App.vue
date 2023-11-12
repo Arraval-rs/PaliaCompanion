@@ -4,7 +4,14 @@
             <v-toolbar class="header">
                 <v-app-bar-nav-icon class="header-item"></v-app-bar-nav-icon>
                 <img src="./assets/Logo.png" :width="100" :height="60">
-                <v-toolbar-title class="header-item">Palia Companion</v-toolbar-title>
+                <v-toolbar-title class="header-item">Companion</v-toolbar-title>
+                <v-spacer></v-spacer>
+                <v-card class="header-card" variant="outlined">
+                    <v-card-text class="flex-container">
+                        This is a fan-made website and is not affiliated with Palia or Singularity 6
+                    </v-card-text>
+                </v-card>
+                <v-spacer></v-spacer>
                 <CountdownTimer class="header-item" @weeklyReset="resetVillagers" @dailyReset="resetDailies"/>
             </v-toolbar>
         </div>
