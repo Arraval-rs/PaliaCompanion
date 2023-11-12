@@ -67,8 +67,8 @@
 .flex-container {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
-  height: 90%;
+  align-items: center;
+  height: 94%;
 }
 
 table {
