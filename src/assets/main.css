@@ -18,6 +18,15 @@
   height: 60%;
 }
 
+.image-button-disabled {
+  background-color: var(--button-white);
+  opacity: 0.5;
+  border-radius: 10px;
+  margin: 10px 0px 0px 0px;
+  width: 60%;
+  height: 60%;
+}
+
 .portrait {
   width: 60%;
   height: 60%;

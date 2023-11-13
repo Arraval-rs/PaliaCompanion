@@ -4,7 +4,7 @@
             <v-toolbar class="header">
                 <v-app-bar-nav-icon class="header-item"></v-app-bar-nav-icon>
                 <img class="logo" src="./assets/Logo.png" :width="100" :height="60">
-                <v-toolbar-title class="header-item">Companion</v-toolbar-title>
+                <v-toolbar-title class="header-item">(Unofficial) Companion</v-toolbar-title>
                 <v-spacer></v-spacer>
                 <v-card class="header-card" variant="outlined">
                     <v-card-text class="flex-container">

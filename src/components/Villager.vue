@@ -18,12 +18,18 @@
 		</td>
 		<td>
 			<div>
-				<button @click="$emit('gifted', villagerIndex, 1)" :class="{'image-button': !villager.weeklyRomance, 'image-button-clicked': villager.weeklyRomance}">
+				<button v-if="props.villager.romance" @click="$emit('gifted', villagerIndex, 1)" :class="{'image-button': !villager.weeklyRomance, 'image-button-clicked': villager.weeklyRomance}">
 					<img class="item-image" src="../assets/Items/Box of Chocolates.webp" alt="Box of Chocolates.webp">
 				</button>
+				<button v-else class="image-button-disabled" disabled>
+					<img class="item-image" src="../assets/Items/Friendship.webp" alt="Friendship.webp">
+				</button>
 			</div>
-			<div class="table-text">
+			<div v-if="props.villager.romance" class="table-text">
 				Weekly Romance
+			</div>
+			<div v-else class="table-text">
+				Not Romanceable
 			</div>
 		</td>
 		<td>
@@ -61,6 +67,7 @@
 	</tr>
 </template>
 
+
 <script setup>
 	import { computed } from 'vue'
 	//potentially turn villager table into a component for filtering?
@@ -68,6 +75,8 @@
 		villager: Object,
 		villagerIndex: Number
 	})
+
+	console.log('Villager romance is ' + props.villager.romance)
 
 	const villagerImage = new URL('../assets/Villagers/' + props.villager.Name + '.webp', import.meta.url).href
 
