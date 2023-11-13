@@ -4,7 +4,7 @@
 			Weekly Reset：{{ days }} days, {{ hours }} hours, {{ minutes }} minutes, {{ seconds }} seconds
 		</vue-countdown>
 		<br>
-		<vue-countdown :key="dailyKey" :time="dailyCountdown" @end="dailyResetTime" v-slot="{ hours, minutes, seconds }">
+		<vue-countdown class="daily-timer" :key="dailyKey" :time="dailyCountdown" @end="dailyResetTime" v-slot="{ hours, minutes, seconds }">
 			Daily Reset：{{ hours }} hours, {{ minutes }} minutes, {{ seconds }} seconds
 		</vue-countdown>
 	</div>
