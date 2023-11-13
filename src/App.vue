@@ -29,8 +29,8 @@
                     <v-btn variant="tonal" @click="resetVillagers">
                         Reset Villagers
                     </v-btn>
-                    <v-btn variant="tonal" @click="clearStorage">
-                        Clear Local Storage
+                    <v-btn variant="tonal" @click="resetDailies">
+                        Clear Daily Gifts
                     </v-btn>
                 </v-card-actions>
             </v-card>
@@ -58,8 +58,5 @@
         weeklyWantsRef.value.clearVillagers()
         console.log('Cleared weekly gifts')
     }
-
-    function clearStorage() {
-        weeklyWantsRef.value.clearStorage()
-    }
+    
 </script>
