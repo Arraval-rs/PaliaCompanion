@@ -18,7 +18,7 @@
             <v-list-item prepend-avatar="./assets/Gift.webp" class="list-item" title="Weekly Wants" @click="navPage('/')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Bug.webp" class="list-item" title="Bugs" @click="navPage('/BugCollection')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Fish.webp" class="list-item" title="Fish" @click="navPage('/FishCollection')"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Meals" @click="navPage('/DishCollection')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Dishes" @click="navPage('/DishCollection')"></v-list-item>
         </v-list>
     </v-navigation-drawer>
     <div class="main">

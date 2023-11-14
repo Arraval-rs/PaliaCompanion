@@ -56,7 +56,7 @@ const Fish = {
         Common:         
         [
                 { Name: "Albino Eel", status: 0},
-                { Name: "Aligator Gar", status: 0},
+                { Name: "Alligator Gar", status: 0},
                 { Name: "Bahari Bass", status: 0},
                 { Name: "Bahari Bream", status: 0},
                 { Name: "Bahari Pike", status: 0},
@@ -160,14 +160,43 @@ const Dishes = {
                 { Name: "Hearty Vegetable Soup", status: 0},
                 { Name: "Hot Hounds", status: 0},
                 { Name: "Macaron", status: 0},
-                { Name: "Palian Onoin Soup", status: 0},
+                { Name: "Palian Onion Soup", status: 0},
                 { Name: "Sashimi", status: 0}
         ],
         Uncommon: [
+                { Name: "Bacon-stuffed Mushrooms", status: 0},
+                { Name: "Blueberry Pie", status: 0},
+                { Name: "Chapaa Asada Tacos", status: 0},
+                { Name: "Crab Gumbo", status: 0},
+                { Name: "Crab Pot Pie", status: 0},
+                { Name: "Cream of Mushroom Soup", status: 0},
+                { Name: "Cream of Tomato Soup", status: 0},
+                { Name: "Fisherman's Brew", status: 0},
+                { Name: "Fried Catfish Dinner", status: 0},
+                { Name: "Loaded Potato Soup", status: 0},
+                { Name: "Ramen", status: 0},
+                { Name: "Sernuk Noodle Stew", status: 0},
+                { Name: "Shepp's Pie", status: 0},
+                { Name: "Steak Dinner", status: 0},
+                { Name: "Trout Dinner", status: 0}
         ],
         Rare: [
+                { Name: "Akwinduu Chapaa", status: 0},
+                { Name: "Apple Pie", status: 0},
+                { Name: "Bouillabaisse", status: 0},
+                { Name: "Chapaa Onigiri", status: 0},
+                { Name: "Chili Oil Dumplings", status: 0},
+                { Name: "Meaty Stir Fry", status: 0},
+                { Name: "Phoenixfire Relleno", status: 0},
+                { Name: "Spicy Stir Fry", status: 0},
+                { Name: "Sushi", status: 0},
+                { Name: "Veggie Fried Rice", status: 0}
         ],
         Epic: [
+                { Name: "Celebration Cake", status: 0},
+                { Name: "Chapaa Masala", status: 0},
+                { Name: "Poke Bowl", status: 0},
+                { Name: "Spicy Rice Cakes", status: 0}
         ]
 }
 
