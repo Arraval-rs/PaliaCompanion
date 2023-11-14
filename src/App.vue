@@ -16,24 +16,7 @@
             </v-toolbar>
         </div>
         <div class="flex-container">
-            <v-card class="card">
-                <v-card-title class="card-title">
-                    Villager Weekly Wants
-                </v-card-title>
-                <v-card-text class="card-text">
-                    <div>
-                        <WeeklyWants ref="weeklyWantsRef"/>
-                    </div>
-                </v-card-text>
-                <v-card-actions class="card-actions">
-                    <v-btn variant="tonal" @click="resetVillagers">
-                        Reset Villagers
-                    </v-btn>
-                    <v-btn variant="tonal" @click="resetDailies">
-                        Clear Daily Gifts
-                    </v-btn>
-                </v-card-actions>
-            </v-card>
+            <WeeklyWants/>
         </div> 
     </div>
 </template>

@@ -1,20 +1,37 @@
 <template>
-    <table>
-        <thead>
-            <tr>
-                <th>Villager</th>
-                <th>Daily Gift</th>
-                <th>Romance Gift</th>
-                <th>Want 1</th>
-                <th>Want 2</th>
-                <th>Want 3</th>
-                <th>Want 4</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr @gifted="updateVillager" v-for="(villager, index) in villagers" is="vue:VillagerRow" :villager=villager :villagerIndex=index></tr>
-        </tbody>
-    </table>
+    <v-card class="card">
+        <v-card-title class="card-title">
+            Villager Weekly Wants
+        </v-card-title>
+        <v-card-text class="card-text">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Villager</th>
+                            <th>Daily Gift</th>
+                            <th>Romance Gift</th>
+                            <th>Want 1</th>
+                            <th>Want 2</th>
+                            <th>Want 3</th>
+                            <th>Want 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr @gifted="updateVillager" v-for="(villager, index) in villagers" is="vue:VillagerRow" :villager=villager :villagerIndex=index></tr>
+                    </tbody>
+                </table>
+            </div>
+        </v-card-text>
+        <v-card-actions class="card-actions">
+            <v-btn variant="tonal" @click="clearVillagers">
+                Reset Villagers
+            </v-btn>
+            <v-btn variant="tonal" @click="clearDailyGifts">
+                Clear Daily Gifts
+            </v-btn>
+        </v-card-actions>
+    </v-card>
 </template>
 
 <script setup>

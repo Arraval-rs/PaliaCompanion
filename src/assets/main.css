@@ -126,11 +126,11 @@
 }
 
 .list {
-  background-color: var(--color-background-soft) !important;
+  background-color: var(--color-background-mute) !important;
 }
 
 .list-item {
-  background-color: var(--color-background-soft) !important;
+  background-color: var(--color-background-mute) !important;
   color: var(--vt-c-white-soft) !important;
 }
 

@@ -1,26 +1,40 @@
 <template>
-	<v-list class="list">
-		<v-list-item class="list-item">
-			Common
-			<v-divider :thickness="dividerThickness" class="common-divider"></v-divider>
-			<BugDisplay :items="bugs.Common" />
-		</v-list-item>
-		<v-list-item class="list-item">
-			Uncommon
-			<v-divider :thickness="dividerThickness" class="uncommon-divider"></v-divider>
-			<BugDisplay :items="bugs.Uncommon" />
-		</v-list-item>
-		<v-list-item class="list-item">
-			Rare
-			<v-divider :thickness="dividerThickness" class="rare-divider"></v-divider>
-			<BugDisplay :items="bugs.Rare" />
-		</v-list-item>
-		<v-list-item class="list-item">
-			Epic
-			<v-divider :thickness="dividerThickness" class="epic-divider"></v-divider>
-			<BugDisplay :items="bugs.Epic" />
-		</v-list-item>
-	</v-list>
+	<v-card class="card">
+        <v-card-title class="card-title">
+            Bug Collection
+        </v-card-title>
+        <v-card-text class="card-text">
+            <div>
+				<v-list class="list">
+					<v-list-item class="list-item">
+						Common
+						<v-divider :thickness="dividerThickness" class="common-divider"></v-divider>
+						<BugDisplay :items="bugs.Common" />
+					</v-list-item>
+					<v-list-item class="list-item">
+						Uncommon
+						<v-divider :thickness="dividerThickness" class="uncommon-divider"></v-divider>
+						<BugDisplay :items="bugs.Uncommon" />
+					</v-list-item>
+					<v-list-item class="list-item">
+						Rare
+						<v-divider :thickness="dividerThickness" class="rare-divider"></v-divider>
+						<BugDisplay :items="bugs.Rare" />
+					</v-list-item>
+					<v-list-item class="list-item">
+						Epic
+						<v-divider :thickness="dividerThickness" class="epic-divider"></v-divider>
+						<BugDisplay :items="bugs.Epic" />
+					</v-list-item>
+				</v-list>
+			</div>
+        </v-card-text>
+        <v-card-actions class="card-actions">
+            <v-btn variant="tonal" @click="resetCollection">
+                Reset Collection
+            </v-btn>
+        </v-card-actions>
+    </v-card>
 </template>
 
 
@@ -32,7 +46,7 @@
 	const dividerThickness = 4
 
 	const bugs = ref({	
-							Common: [
+						Common: 	[
 										{ Name: "Bahari Crab", status: 0 },
 										{ Name: "Brushtail Dragonfly", status: 0 },
 										{ Name: "Common Bark Cicada", status: 0},
@@ -80,4 +94,8 @@
 										{ Name: "Rainbow-Tipped Butterfly", status: 0}
 									]
 					})
+
+	function resetCollection() {
+
+	}
 </script>
