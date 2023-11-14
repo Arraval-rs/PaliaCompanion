@@ -76,8 +76,6 @@
 		villagerIndex: Number
 	})
 
-	console.log('Villager romance is ' + props.villager.romance)
-
 	const villagerImage = new URL('../assets/Villagers/' + props.villager.Name + '.webp', import.meta.url).href
 
 	const wantItem = [

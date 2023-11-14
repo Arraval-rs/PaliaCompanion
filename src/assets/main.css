@@ -27,6 +27,12 @@
   height: 60%;
 }
 
+.collection-button {
+  width: 20%;
+  height: 100px !important;
+  margin: 5px;
+}
+
 .portrait {
   width: 60%;
   height: 60%;
@@ -54,6 +60,10 @@
   position: absolute;
   background-color: var(--color-background-soft) !important;
   color: var(--vt-c-white-soft) !important;
+}
+
+.drawer {
+  background-color: var(--color-background-mute) !important;
 }
 
 .card {
@@ -94,9 +104,45 @@
 .flex-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   height: 94%;
   width: 100%;
+}
+
+.common-divider {
+  border-color: var(--rarity-common);
+  opacity: 80% !important;
+}
+
+.uncommon-divider {
+  border-color: var(--rarity-uncommon);
+  opacity: 80% !important;
+}
+
+.rare-divider {
+  border-color: var(--rarity-rare);
+  opacity: 80% !important;
+}
+
+.epic-divider {
+  border-color: var(--rarity-epic);
+  opacity: 80% !important;
+}
+
+.list {
+  background-color: var(--color-background-mute) !important;
+}
+
+.list-item {
+  background-color: var(--color-background-mute) !important;
+  color: var(--vt-c-white-soft) !important;
+}
+
+.collection-table {
+  border: 0px;
+  text-align: center;
+  width: 100%;
+  table-layout: fixed; 
 }
 
 table {
@@ -107,8 +153,14 @@ table {
   width: 100%;
   table-layout: fixed;
 }
+thead {
+  border: inherit;
+}
+tbody {
+  border: inherit;
+}
 th {
-  border: 1px solid;
+  border: inherit;
   border-radius: 5px;
   border-color: var(--vt-c-white-soft);
   background-color: var(--palia-blue);
@@ -116,8 +168,11 @@ th {
   position: sticky;
   top: 0;
 }
+tr {
+  border: inherit;
+}
 td {
-  border: 1px solid;
+  border: inherit;
   border-color: var(--vt-c-white-soft);
   padding: 10px;
   vertical-align: top;
@@ -133,6 +188,9 @@ tr:hover {background-color: var(--color-background-mute)}
 
 .main {
   height: 100vh;
+  background-image: url("../assets/Background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 @media (max-width: 479px) { /* Portrait Devices */
@@ -178,6 +236,13 @@ tr:hover {background-color: var(--color-background-mute)}
   table {
     width: 150%;
     white-space: pre-wrap;
+  }
+
+  .main {
+    background-image: url("../assets/Mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 11px;
   }
 }
 

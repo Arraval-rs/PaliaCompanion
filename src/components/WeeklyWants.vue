@@ -1,25 +1,42 @@
 <template>
-    <table>
-        <thead>
-            <tr>
-                <th>Villager</th>
-                <th>Daily Gift</th>
-                <th>Romance Gift</th>
-                <th>Want 1</th>
-                <th>Want 2</th>
-                <th>Want 3</th>
-                <th>Want 4</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr @gifted="updateVillager" v-for="(villager, index) in villagers" is="vue:VillagerRow" :villager=villager :villagerIndex=index></tr>
-        </tbody>
-    </table>
+    <v-card class="card">
+        <v-card-title class="card-title">
+            Villager Weekly Wants
+        </v-card-title>
+        <v-card-text class="card-text">
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Villager</th>
+                            <th>Daily Gift</th>
+                            <th>Romance Gift</th>
+                            <th>Want 1</th>
+                            <th>Want 2</th>
+                            <th>Want 3</th>
+                            <th>Want 4</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr @gifted="updateVillager" v-for="(villager, index) in villagers" is="vue:VillagerRow" :villager=villager :villagerIndex=index></tr>
+                    </tbody>
+                </table>
+            </div>
+        </v-card-text>
+        <v-card-actions class="card-actions">
+            <v-btn variant="tonal" @click="clearVillagers">
+                Reset Villagers
+            </v-btn>
+            <v-btn variant="tonal" @click="clearDailyGifts">
+                Clear Daily Gifts
+            </v-btn>
+        </v-card-actions>
+    </v-card>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import { useStorage } from '@vueuse/core'
+import { useStorage } from '@vueuse/core';
 import VillagerRow from './Villager.vue';
 
 const villagers = ref(useStorage('Villagers', [
@@ -209,16 +226,22 @@ function clearDailyGifts() {
 
 function mergeStorage(storageValue, defaults) {
     if (defaults.length > storageValue.length) {
+        console.log('More default villagers than storage. Loading default villagers')
         return defaults
     }
     for (let i = 0; i < defaults.length; i++) {
         for (let j = 0; j < defaults[i].weeklyWants.length; j++) {
-            if (defaults[i].weeklyWants[j] != storageValue[i].weeklyWants[j]) {
+            if (defaults[i].weeklyWants[j].Name !== storageValue[i].weeklyWants[j].Name) {
+                console.log('Weekly wants have been updated. Loading default villagers.\n\n' + 
+                            'Incorrect weekly want for: ' + defaults[i].Name + '(default) and ' + storageValue[i].Name + '(storage)\n\n' +
+                            'Incorrect want is: ' + defaults[i].weeklyWants[j].Name + '(default) and ' + storageValue[i].weeklyWants[j].Name + '(storage)'
+                    )
                 return defaults
             }
             storageValue[i].romance = defaults[i].romance
         }
     }
+    console.log('Loading stored villagers')
     return storageValue
 }
 
