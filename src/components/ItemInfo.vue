@@ -11,11 +11,14 @@
 			<v-divider :thickness="dividerThickness"></v-divider>
 		</v-card-text>
 		<v-card-actions>
-			<v-btn variant="tonal" @click="">
+			<v-btn variant="tonal" @click="item.status='No'">
+                Unobtained
+            </v-btn>
+            <v-btn variant="tonal" @click="item.status='Yes'">
                 Obtained
             </v-btn>
-            <v-btn variant="tonal" @click="">
-                Quality Obtained
+            <v-btn variant="tonal" @click="item.status='Quality!'">
+                Quality
             </v-btn>
 		</v-card-actions>
 	</v-card>

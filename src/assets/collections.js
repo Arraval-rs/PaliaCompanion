@@ -164,7 +164,7 @@ const Dishes = {
                 { Name: "Sashimi", status: "No"}
         ],
         Uncommon: [
-                { Name: "Bacon-stuffed Mushrooms", status: "No"},
+                { Name: "Bacon-Stuffed Mushrooms", status: "No"},
                 { Name: "Blueberry Pie", status: "No"},
                 { Name: "Chapaa Asada Tacos", status: "No"},
                 { Name: "Crab Gumbo", status: "No"},

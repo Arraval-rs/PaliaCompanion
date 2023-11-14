@@ -25,7 +25,7 @@
     </v-navigation-drawer>
     <div class="main">
         <div class="flex-container">
-            <router-view v-slot="{Component}">
+            <router-view :key="route.path" v-slot="{Component}">
                 <component ref="routerViewRef" :is="Component" @selected-collection-item="handleCollectionEvent"/>
             </router-view>
         </div> 

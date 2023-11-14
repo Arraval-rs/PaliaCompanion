@@ -9,22 +9,22 @@
 					<v-list-item class="list-item">
 						Common
 						<v-divider :thickness="dividerThickness" class="common-divider"></v-divider>
-						<CollectionDisplay :items="collection.Common" @selected-collection-item="eventPassthrough($event, 'Common')"/>
+						<CollectionDisplay ref="commonItems" :items="collectionRef.Common" @selected-collection-item="eventPassthrough($event, 'Common')"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Uncommon
 						<v-divider :thickness="dividerThickness" class="uncommon-divider"></v-divider>
-						<CollectionDisplay :items="collection.Uncommon" @selected-collection-item="eventPassthrough($event, 'Uncommon')"/>
+						<CollectionDisplay :items="collectionRef.Uncommon" @selected-collection-item="eventPassthrough($event, 'Uncommon')"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Rare
 						<v-divider :thickness="dividerThickness" class="rare-divider"></v-divider>
-						<CollectionDisplay :items="collection.Rare" @selected-collection-item="eventPassthrough($event, 'Rare')"/>
+						<CollectionDisplay :items="collectionRef.Rare" @selected-collection-item="eventPassthrough($event, 'Rare')"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Epic
 						<v-divider :thickness="dividerThickness" class="epic-divider"></v-divider>
-						<CollectionDisplay :items="collection.Epic" @selected-collection-item="eventPassthrough($event, 'Epic')"/>
+						<CollectionDisplay :items="collectionRef.Epic" @selected-collection-item="eventPassthrough($event, 'Epic')"/>
 					</v-list-item>
 				</v-list>
 			</div>
@@ -51,6 +51,10 @@
 		title: String,
 		collection: Object
 	})
+
+	const collectionRef = ref(props.collection)
+
+	const commonItems = ref(null)
 
 	function resetCollection() {
 

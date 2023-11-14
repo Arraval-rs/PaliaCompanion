@@ -3,6 +3,8 @@ import { createRouter, createWebHistory } from 'vue-router'
 import { Bugs, Fish, Dishes } from '@/assets/collections.js'
 import Collection from '@/components/Collection'
 
+const BugCollection = Collection
+
 // route components
     const routes = [
         { path: '/PaliaCompanion/', component: () => import('@/components/HomePage') },
