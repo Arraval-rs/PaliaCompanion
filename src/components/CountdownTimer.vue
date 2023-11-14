@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<vue-countdown :key="weeklyKey" :time="weeklyCountdown" @end="weeklyResetTime" v-slot="{ days, hours, minutes, seconds }">
+		<vue-countdown class="weekly-timer" :key="weeklyKey" :time="weeklyCountdown" @end="weeklyResetTime" v-slot="{ days, hours, minutes, seconds }">
 			Weekly Reset：{{ days }} days, {{ hours }} hours, {{ minutes }} minutes, {{ seconds }} seconds
 		</vue-countdown>
 		<br>
