@@ -19,7 +19,7 @@
 
 <script setup>
 import { ref } from 'vue';
-import { useStorage } from '@vueuse/core'
+import { useStorage } from '@vueuse/core';
 import VillagerRow from './Villager.vue';
 
 const villagers = ref(useStorage('Villagers', [

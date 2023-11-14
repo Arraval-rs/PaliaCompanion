@@ -41,6 +41,7 @@
 <script setup>
     import { ref, computed } from 'vue'
     import WeeklyWants from './components/WeeklyWants.vue'
+    import BugCollection from './components/BugCollection.vue'
     import CountdownTimer from './components/CountdownTimer.vue'
 
     // need to pair to additional console logs and pass to child component props
@@ -58,5 +59,4 @@
         weeklyWantsRef.value.clearVillagers()
         console.log('Cleared weekly gifts')
     }
-    
 </script>
