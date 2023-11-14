@@ -44,22 +44,30 @@
   height: 90%;
 }
 
+.homepage-top-header {
+  margin: 0px 10px 10px 10px;
+}
+
+.homepage-header {
+  margin: 25px 10px 10px 10px;
+}
+
+.homepage-divider {
+  margin-bottom: 5px;
+}
+
 .header {
   background-color: var(--color-background-soft) !important;
+}
+
+.header-title {
+  color: var(--vt-c-white-soft) !important;
+  margin: 5px;
 }
 
 .header-item {
   color: var(--vt-c-white-soft) !important;
   margin: 5px;
-}
-
-.header-card {
-  width: 28%;
-  height: 60%;
-  overflow: hidden;
-  position: absolute;
-  background-color: var(--color-background-soft) !important;
-  color: var(--vt-c-white-soft) !important;
 }
 
 .drawer {
@@ -145,6 +153,10 @@
   table-layout: fixed; 
 }
 
+a {
+  color: var(--palia-blue);
+}
+
 table {
   border: 1px solid;
   border-color: var(--vt-c-white-soft);
@@ -201,10 +213,28 @@ tr:hover {background-color: var(--color-background-mute)}
     position: relative;
   }
 
+  .card-title {
+    height: 15%;
+    font-size: 15px !important;
+    overflow: scroll;
+  }
+
+  .card-text {
+    height: 75%;
+  }
+
+  .card-actions {
+    overflow: scroll;
+  }
+
   .portrait {
     width: 100%;
     height: 50%;
     margin: 10px 0px 0px 0px;
+  }
+
+  .header-title {
+    display: none;
   }
 
   .image-button {
@@ -287,6 +317,10 @@ tr:hover {background-color: var(--color-background-mute)}
   .flex-container {
     height: 80%;
     font-size: 8px !important;
+  }
+
+  .header-title {
+    display: none;
   }
 
   .header-item {

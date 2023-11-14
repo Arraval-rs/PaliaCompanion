@@ -3,19 +3,14 @@
     <v-app-bar class="header">
         <v-app-bar-nav-icon class="header-item" @click.stop="navDrawer = !navDrawer"></v-app-bar-nav-icon>
         <img class="logo" src="./assets/Logo.png" :width="100" :height="60">
-        <v-toolbar-title class="header-item">(Unofficial) Companion</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-card class="header-card" variant="outlined">
-            <v-card-text class="flex-container">
-                This is a fan-made website and is not affiliated with Palia or Singularity 6
-            </v-card-text>
-        </v-card>
+        <v-toolbar-title class="header-title">(Unofficial) Companion</v-toolbar-title>
         <v-spacer></v-spacer>
         <CountdownTimer class="header-item" @weeklyReset="resetVillagers" @dailyReset="resetDailies"/>
     </v-app-bar>
     <v-navigation-drawer class="drawer" v-model="navDrawer" location="left" :width="201">
         <v-list nav>
-            <v-list-item prepend-avatar="./assets/Gift.webp" class="list-item" title="Weekly Wants" @click="navPage('/')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Home.png" class="list-item" title="Home" @click="navPage('/')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Gift.webp" class="list-item" title="Weekly Wants" @click="navPage('/WeeklyWants')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Bug.webp" class="list-item" title="Bugs" @click="navPage('/BugCollection')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Fish.webp" class="list-item" title="Fish" @click="navPage('/FishCollection')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Dishes" @click="navPage('/DishCollection')"></v-list-item>
