@@ -226,16 +226,22 @@ function clearDailyGifts() {
 
 function mergeStorage(storageValue, defaults) {
     if (defaults.length > storageValue.length) {
+        console.log('More default villagers than storage. Loading default villagers')
         return defaults
     }
     for (let i = 0; i < defaults.length; i++) {
         for (let j = 0; j < defaults[i].weeklyWants.length; j++) {
-            if (defaults[i].weeklyWants[j] != storageValue[i].weeklyWants[j]) {
+            if (defaults[i].weeklyWants[j].Name !== storageValue[i].weeklyWants[j].Name) {
+                console.log('Weekly wants have been updated. Loading default villagers.\n\n' + 
+                            'Incorrect weekly want for: ' + defaults[i].Name + '(default) and ' + storageValue[i].Name + '(storage)\n\n' +
+                            'Incorrect want is: ' + defaults[i].weeklyWants[j].Name + '(default) and ' + storageValue[i].weeklyWants[j].Name + '(storage)'
+                    )
                 return defaults
             }
             storageValue[i].romance = defaults[i].romance
         }
     }
+    console.log('Loading stored villagers')
     return storageValue
 }
 

@@ -1,7 +1,7 @@
 <template>
 	<v-card class="card">
         <v-card-title class="card-title">
-            Bug Collection
+            Bug Collection (does not do anything yet)
         </v-card-title>
         <v-card-text class="card-text">
             <div>

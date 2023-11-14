@@ -62,6 +62,10 @@
   color: var(--vt-c-white-soft) !important;
 }
 
+.drawer {
+  background-color: var(--color-background-mute) !important;
+}
+
 .card {
   width: 60%;
   height: 85%;
@@ -100,7 +104,7 @@
 .flex-container {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   height: 94%;
   width: 100%;
 }
@@ -184,6 +188,9 @@ tr:hover {background-color: var(--color-background-mute)}
 
 .main {
   height: 100vh;
+  background-image: url("../assets/Background.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
 
 @media (max-width: 479px) { /* Portrait Devices */
@@ -229,6 +236,13 @@ tr:hover {background-color: var(--color-background-mute)}
   table {
     width: 150%;
     white-space: pre-wrap;
+  }
+
+  .main {
+    background-image: url("../assets/Mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    font-size: 11px;
   }
 }
 
