@@ -21,12 +21,14 @@
 					Everything right now lol
 				</p>
 				<h1 class="homepage-header">Planned Features</h1>
+				<v-divider class="homepage-divider" :thickness="dividerThickness"></v-divider>
 				<v-list class="list" tag='ul'>
 					<v-list-item v-for="item in plannedFeatures" class="list-item" tag='li'>
 						{{ '• ' + item }}
 					</v-list-item>
 				</v-list>
 				<h1 class="homepage-header">Issues</h1>
+				<v-divider class="homepage-divider" :thickness="dividerThickness"></v-divider>
 				<v-list class="list">
 					<v-list-item v-for="item in issues" class="list-item" tag='li'>
 						{{ '• ' + item }}
