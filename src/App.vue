@@ -18,6 +18,7 @@
             <v-list-item prepend-avatar="./assets/Gift.webp" class="list-item" title="Weekly Wants" @click="navPage('/')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Bug.webp" class="list-item" title="Bugs" @click="navPage('/BugCollection')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Fish.webp" class="list-item" title="Fish" @click="navPage('/FishCollection')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Meals" @click="navPage('/DishCollection')"></v-list-item>
         </v-list>
     </v-navigation-drawer>
     <div class="main">
@@ -34,7 +35,6 @@
     import { ref, computed } from 'vue'
     import { useRouter, useRoute } from 'vue-router'
     import WeeklyWants from './components/WeeklyWants.vue'
-    import BugCollection from './components/BugCollection.vue'
     import CountdownTimer from './components/CountdownTimer.vue'
 
     // router info
