@@ -22,7 +22,9 @@
     </v-navigation-drawer>
     <div class="main">
         <div class="flex-container">
-            <router-view />
+            <router-view v-slot="{Component}">
+                <component ref="routerViewRef" :is="Component"/>
+            </router-view>
         </div> 
     </div>
 </v-app>
@@ -35,16 +37,22 @@
     import BugCollection from './components/BugCollection.vue'
     import CountdownTimer from './components/CountdownTimer.vue'
 
-    var navDrawer = ref(true)
-
-    // need to pair to additional console logs and pass to child component props
-    const debug = false
-
     // router info
     const router = useRouter()
     const route = useRoute()
+    var navDrawer = ref(true)
+    const routerViewRef = ref(null)
 
     function navPage(page) {
         router.push('/PaliaCompanion' + page)
+    }
+
+    // Weekly wants info
+    function resetVillagers() {
+        routerViewRef.value.clearVillagers()
+    }
+
+    function resetDailies() {
+        routerViewRef.value.clearDailyGifts()
     }
 </script>
