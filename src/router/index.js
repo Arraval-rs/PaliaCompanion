@@ -9,9 +9,9 @@ const BugCollection = Collection
     const routes = [
         { path: '/PaliaCompanion/', component: () => import('@/components/HomePage') },
         { path: '/PaliaCompanion/WeeklyWants', component: () => import('@/components/WeeklyWants') },
-        { path: '/PaliaCompanion/BugCollection', component: Collection, props: { title: "Bug Collection (Currently no function)", collection: Bugs}},
-        { path: '/PaliaCompanion/FishCollection', component: Collection, props: { title: "Fish Collection (Currently no function)", collection: Fish}},
-        { path: '/PaliaCompanion/DishCollection', component: Collection, props: { title: "Dish Collection (Currently no function)", collection: Dishes}},
+        { path: '/PaliaCompanion/BugCollection', component: Collection, props: { title: "Bug Collection", collection: Bugs}},
+        { path: '/PaliaCompanion/FishCollection', component: Collection, props: { title: "Fish Collection", collection: Fish}},
+        { path: '/PaliaCompanion/DishCollection', component: Collection, props: { title: "Dish Collection", collection: Dishes}},
         { path: '/PaliaCompanion/*', component: () => import('@/components/HomePage') }
     ]
 

@@ -1,5 +1,4 @@
-const Bugs = {   
-        Common:         
+const Bugs = [         
         [
                 { Name: "Bahari Crab", status: "No" , additionalDetails: "<p>Location: Bahari Bay</p><p>Biome: Bahari Coast</p><p>Appears: Any Time</p><br><h1>Description</h1><p>A local crab, known to taste good with drawn butter.<br>Found along the coast of Bahari Bay. Also has a chance to be found when foraging shells in Bahari Bay.</p>"},
                 { Name: "Brushtail Dragonfly", status: "No" },
@@ -9,8 +8,7 @@ const Bugs = {
                 { Name: "Kilima Night Moth", status: "No"},
                 { Name: "Paper Lantern Bug", status: "No"},
                 { Name: "Spotted Stinkbug", status: "No"}
-        ], 
-        Uncommon:       
+        ],       
         [
                 { Name: "Bahari Bee", status: "No"},
                 { Name: "Cerulean Cicada", status: "No"},
@@ -24,8 +22,7 @@ const Bugs = {
                 { Name: "Lunar Fairy Moth", status: "No"},
                 { Name: "Proudhorned Stag Beetle", status: "No"},
                 { Name: "Spineshell Crab", status: "No"}
-        ], 
-        Rare:           
+        ],            
         [
                 { Name: "Azure Stonehopper", status: "No"},
                 { Name: "Bahari Glowbug", status: "No"},
@@ -42,18 +39,16 @@ const Bugs = {
                 { Name: "Spotted Mantis", status: "No"},
                 { Name: "Stripeshell Snail", status: "No"},
                 { Name: "Vampire Crab", status: "No"}
-        ], 
-        Epic:           
+        ],           
         [
                 { Name: "Ancient Amber Beetle", status: "No"},
                 { Name: "Fairy Mantis", status: "No"},
                 { Name: "Jewelwing Dragonfly", status: "No"},
                 { Name: "Rainbow-Tipped Butterfly", status: "No"}
         ]
-}
+]
 
-const Fish = {
-        Common:         
+const Fish = [        
         [
                 { Name: "Albino Eel", status: "No"},
                 { Name: "Alligator Gar", status: "No"},
@@ -91,8 +86,7 @@ const Fish = {
                 { Name: "Striped Dace", status: "No"},
                 { Name: "Yellow Perch", status: "No"},
                 { Name: "Yellowfin Tuna", status: "No"}
-        ],
-        Uncommon:       
+        ],       
         [
                 { Name: "Barracuda", status: "No"},
                 { Name: "Bat Ray", status: "No"},
@@ -118,8 +112,7 @@ const Fish = {
                 { Name: "Stickleback", status: "No"},
                 { Name: "Striped Sturgeon", status: "No"},
                 { Name: "Umbran Carp", status: "No"}
-        ],
-        Rare:           
+        ],       
         [
                 { Name: "Blue Marlin", status: "No"},
                 { Name: "Blue Spotted Ray", status: "No"},
@@ -135,8 +128,7 @@ const Fish = {
                 { Name: "Stormray", status: "No"},
                 { Name: "Thundering Eel", status: "No"},
                 { Name: "Willow Lamprey", status: "No"}
-        ],
-        Epic:           
+        ],          
         [
                 { Name: "Ancient Fish", status: "No"},
                 { Name: "Flametongue Ray", status: "No"},
@@ -146,10 +138,10 @@ const Fish = {
                 { Name: "Swordfin Eel", status: "No"},
                 { Name: "Void Ray", status: "No"}
         ]
-}
+]
 
-const Dishes = {
-        Common: [
+const Dishes = [
+        [
                 { Name: "Creamy Carrot Soup", status: "No"},
                 { Name: "Fish Stew", status: "No"},
                 { Name: "Fish Tacos", status: "No"},
@@ -163,7 +155,7 @@ const Dishes = {
                 { Name: "Palian Onion Soup", status: "No"},
                 { Name: "Sashimi", status: "No"}
         ],
-        Uncommon: [
+        [
                 { Name: "Bacon-Stuffed Mushrooms", status: "No"},
                 { Name: "Blueberry Pie", status: "No"},
                 { Name: "Chapaa Asada Tacos", status: "No"},
@@ -180,7 +172,7 @@ const Dishes = {
                 { Name: "Steak Dinner", status: "No"},
                 { Name: "Trout Dinner", status: "No"}
         ],
-        Rare: [
+        [
                 { Name: "Akwinduu Chapaa", status: "No"},
                 { Name: "Apple Pie", status: "No"},
                 { Name: "Bouillabaisse", status: "No"},
@@ -192,12 +184,12 @@ const Dishes = {
                 { Name: "Sushi", status: "No"},
                 { Name: "Veggie Fried Rice", status: "No"}
         ],
-        Epic: [
+        [
                 { Name: "Celebration Cake", status: "No"},
                 { Name: "Chapaa Masala", status: "No"},
                 { Name: "Poke Bowl", status: "No"},
                 { Name: "Spicy Rice Cakes", status: "No"}
         ]
-}
+]
 
 export { Bugs, Fish, Dishes}

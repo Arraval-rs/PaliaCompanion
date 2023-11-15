@@ -1,16 +1,18 @@
 <template>
-	<img :src="imagePath()" class="infoImage">
+	<div class='drawer'>
+		<img :src="imagePath()" class="info-image">
+	</div>
 	<v-card>
-		<v-card-title>
+		<v-card-title class="card-title">
 			{{ item.Name }}
 		</v-card-title>
-		<v-card-text>
+		<v-card-text class="card-text">
 			Obtained: {{ item.status }}
 			<v-divider :thickness="dividerThickness"></v-divider>
 			<div v-html="item.additionalDetails"></div>
 			<v-divider :thickness="dividerThickness"></v-divider>
 		</v-card-text>
-		<v-card-actions>
+		<v-card-actions class="card-actions">
 			<v-btn variant="tonal" @click="item.status='No'">
                 Unobtained
             </v-btn>
@@ -28,7 +30,7 @@
 	import { ref } from 'vue'
 
 	const dividerThickness = 4
-	const placeholderItem = { Name: 'null', status: 'null', additionalDetails: 'null'}
+	const placeholderItem = { Name: 'Celebration Cake', status: 'null', additionalDetails: 'null'}
 
 	var item = ref(placeholderItem)
 

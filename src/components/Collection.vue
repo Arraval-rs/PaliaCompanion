@@ -9,22 +9,22 @@
 					<v-list-item class="list-item">
 						Common
 						<v-divider :thickness="dividerThickness" class="common-divider"></v-divider>
-						<CollectionDisplay ref="commonItems" :items="collectionRef.Common" @selected-collection-item="eventPassthrough($event, 'Common')"/>
+						<CollectionDisplay :items="collectionRef[0]" @selected-collection-item="eventPassthrough($event, 0)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Uncommon
 						<v-divider :thickness="dividerThickness" class="uncommon-divider"></v-divider>
-						<CollectionDisplay :items="collectionRef.Uncommon" @selected-collection-item="eventPassthrough($event, 'Uncommon')"/>
+						<CollectionDisplay :items="collectionRef[1]" @selected-collection-item="eventPassthrough($event, 1)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Rare
 						<v-divider :thickness="dividerThickness" class="rare-divider"></v-divider>
-						<CollectionDisplay :items="collectionRef.Rare" @selected-collection-item="eventPassthrough($event, 'Rare')"/>
+						<CollectionDisplay :items="collectionRef[2]" @selected-collection-item="eventPassthrough($event, 2)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Epic
 						<v-divider :thickness="dividerThickness" class="epic-divider"></v-divider>
-						<CollectionDisplay :items="collectionRef.Epic" @selected-collection-item="eventPassthrough($event, 'Epic')"/>
+						<CollectionDisplay :items="collectionRef[3]" @selected-collection-item="eventPassthrough($event, 3)"/>
 					</v-list-item>
 				</v-list>
 			</div>
@@ -52,15 +52,33 @@
 		collection: Object
 	})
 
-	const collectionRef = ref(props.collection)
-
-	const commonItems = ref(null)
+	const collectionRef = ref(useStorage(props.title, props.collection, localStorage, { mergeDefaults: (storageValue, defaults) => mergeStorage(storageValue, defaults) }))
+	localStorage.setItem('test', collectionRef.value)
 
 	function resetCollection() {
-
+		for (let i = 0; i < collectionRef.value.length; i++) {
+			for (let j = 0; j < collectionRef.value[i].length; j++) {
+				collectionRef.value[i][j].status = 'No'
+			}
+		}
 	}
 
 	function eventPassthrough(index, rarity) {
 		emit('selected-collection-item', index, rarity, props.title)
+	}
+
+	function mergeStorage(storageValue, defaults) {
+		var newValues = defaults
+		for (let i = 0; i < storageValue.length; i++) {
+			for (let j = 0; j < storageValue[i].length; j++) {
+				for (let k = 0; k < storageValue[i].length; k++) {
+					if (storageValue[i][j].Name === newValues[i][k].Name) {
+						//console.log('Assigning status ' + storageValue[i][j].status + ' for ' + storageValue[i][j].Name + ' to ' + newValues[i][k].Name)
+						newValues[i][k].status = storageValue[i][k].status
+					}
+				}
+			}
+		}
+		return newValues
 	}
 </script>

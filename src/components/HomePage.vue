@@ -56,12 +56,13 @@
 	const plannedFeatures = [
 		"Allowing tracking of obtained bugs, fish, and dishes",
 		"Add details to each collection's items (check out Bahari Crabs!)",
-		"Save collection status for users",
 		"Addition of furniture collection",
-		"Light/Dark mode toggle"
+		"Light/Dark mode toggle",
+		"'Condesed' setting (only lists/checkboxes instead of images) if there is interest"
 	]
 
 	const issues = [
-		"Mobile formatting feels cluttered"
+		"Mobile feels cluttered",
+		"Changing collection item from another page does not update the collection (closes the drawer on nav for now)"
 	]
 </script>
