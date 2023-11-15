@@ -28,8 +28,8 @@
 			console.log('Emitted weeklyReset event')
 		}
 		const now = new Date()
-		const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 8 - now.getDay(), 4, -now.getTimezoneOffset())
-		const nextReset = (target - now) % (1000 * 60 * 60 * 24 * 7) // difference mod 1 week
+		const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 8 - now.getDay(), 0)
+		const nextReset = (target - now + now.getTimezoneOffset()) % (1000 * 60 * 60 * 24 * 7) // difference mod 1 week
 		weeklyCountdown = nextReset
 		weeklyKey.value++
 		console.log('Daily timer reset with new key ' + weeklyKey.value)
@@ -42,10 +42,11 @@
 			console.log('Emitted dailyReset event')
 		}
 		const now = new Date()
-		const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 4, -now.getTimezoneOffset())
-		const nextReset = (target - now) % (1000 * 60 * 60 * 24) // difference mod 1 day
+		const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1, 0)
+		const nextReset = (target - now + now.getTimezoneOffset()) % (1000 * 60 * 60 * 24) // difference mod 1 day
 		dailyCountdown.value = nextReset
 		dailyKey.value++
+		console.log('Now: ' + now + '\nTarget: ' + target + '\nReset: ' + nextReset)
 		console.log('Daily timer reset with new key ' + dailyKey.value + ' and time ' + nextReset)
 	}
 </script>
