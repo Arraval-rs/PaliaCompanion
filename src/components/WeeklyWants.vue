@@ -188,6 +188,8 @@ const villagers = ref(useStorage('Villagers', [
 localStorage,
 { mergeDefaults: (storageValue, defaults) => mergeStorage(storageValue, defaults) }))
 
+localStorage.setItem('Villagers', villagers)
+
 function updateVillager(villagerIndex, giftIndex) {
     switch(giftIndex) {
         case 0:
@@ -205,7 +207,6 @@ function updateVillager(villagerIndex, giftIndex) {
             villagers.value[villagerIndex].dailyGift = villagers.value[villagerIndex].weeklyWants[giftIndex - 2].Gifted
             break;
     }
-    localStorage.setItem('Villagers', villagers)
 }
 
 function clearVillagers() {

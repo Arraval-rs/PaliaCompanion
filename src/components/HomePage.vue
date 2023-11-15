@@ -13,6 +13,10 @@
 				<h1 class="homepage-header">Usage</h1>
 				<v-divider class="homepage-divider" :thickness="dividerThickness"></v-divider>
 				<p>
+					Palia Companion uses cookies. Progress will be saved when using the same device and browser.
+				</p>
+				<br>
+				<p>
 					From each page you can track your weekly gifts, collected bugs and fish, and prepared dishes. Most images are buttons, so click around and see how things work! I will update some clearer instructions once more of the app is functional.
 				</p>
 				<h1 class="homepage-header">New!</h1>
@@ -50,12 +54,15 @@
 	const dividerThickness = 4
 
 	const plannedFeatures = [
-		"Allowing tracking of obtained bugs, fish, and dishes.",
+		"Allowing tracking of obtained bugs, fish, and dishes",
+		"Add details to each collection's items (check out Bahari Crabs!)",
 		"Addition of furniture collection",
-		"Light/Dark mode toggle"
+		"Light/Dark mode toggle",
+		"'Condesed' setting (only lists/checkboxes instead of images) if there is interest"
 	]
 
 	const issues = [
-		"Mobile formatting feels cluttered"
+		"Mobile feels cluttered",
+		"Changing collection item from another page does not update the collection (closes the drawer on nav for now)"
 	]
 </script>

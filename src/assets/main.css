@@ -1,5 +1,12 @@
 @import './base.css';
 
+.close-button {
+  background-color:  var(--button-white) !important;
+  border-radius: 50% !important;
+  width: 25px;
+  margin: 10px;
+}
+
 .image-button {
   background-color:  var(--button-white);
   opacity: 1;
@@ -12,6 +19,15 @@
 .image-button-clicked {
   background-color: var(--color-background-mute);
   opacity: 0.25;
+  border-radius: 10px;
+  margin: 10px 0px 0px 0px;
+  width: 60%;
+  height: 60%;
+}
+
+.image-button-quality {
+  background-color: var(--rarity-epic);
+  opacity: 1;
   border-radius: 10px;
   margin: 10px 0px 0px 0px;
   width: 60%;
@@ -44,6 +60,11 @@
   height: 90%;
 }
 
+.info-image {
+  width:  60%;
+  margin: 30px;
+}
+
 .homepage-top-header {
   margin: 0px 10px 10px 10px;
 }
@@ -72,6 +93,8 @@
 
 .drawer {
   background-color: var(--color-background-mute) !important;
+  display: flex;
+  justify-content: center;
 }
 
 .card {
@@ -86,6 +109,7 @@
   font-size: 30px !important;
   background-color: var(--color-background);
   color: var(--vt-c-white-soft);
+  white-space: normal !important;
 }
 
 .card-subtitle {
@@ -206,6 +230,10 @@ tr:hover {background-color: var(--color-background-mute)}
 }
 
 @media (max-width: 479px) { /* Portrait Devices */
+  .close-button {
+    display: none;
+  }
+
   .card {
     width: 100%;
     height: 60%;
@@ -243,6 +271,16 @@ tr:hover {background-color: var(--color-background-mute)}
   }
 
   .image-button-clicked {
+    width: 100%;
+    height: 30%;
+  }
+
+  .image-button-quality {
+    width: 100%;
+    height: 30%;
+  }
+
+  .image-button-disabled {
     width: 100%;
     height: 30%;
   }
@@ -310,6 +348,16 @@ tr:hover {background-color: var(--color-background-mute)}
   }
 
   .image-button-clicked {
+    width: 100%;
+    height: 30%;
+  }
+
+  .image-button-quality {
+    width: 100%;
+    height: 30%;
+  }
+
+  .image-button-disabled {
     width: 100%;
     height: 30%;
   }
