@@ -9,6 +9,7 @@
             Current Phase: {{ dayPhase }}
         </v-card-subtitle>
         <v-card-text class="card-text">
+        	Will show all bug and fish available based on current in-game time (with filter option to remove 'Any Time' bugs and fish)
         </v-card-text>
         <v-card-actions class="card-actions">
         </v-card-actions>
@@ -20,15 +21,10 @@
 	import { timer } from '@/composables/timer.js'
 
 	// vars
-	const gameOffset = 5 // offset in game-minutes
 	const gameRatio = 1 / 24 // 1 real-world hour === 1 in-game day
 	var intervalId = 0
-	var counter = 0
 
 	// refs
-	const gameHours = ref(0)
-	const gameMinutes = ref(0)
-	//const noonSwitch = ref('')
 	const dayPhase = ref('')
 	const { days, hours, minutes, seconds, noonSwitch } = timer(gameRatio, currentGameTime(), false, false)
 
@@ -49,7 +45,7 @@
 		}
 	}
 
-	watch(hours, async (newHours, oldHours) => {
+	watch(minutes, async (newHours, oldHours) => {
 		updatePhase()
 	})
 </script>
