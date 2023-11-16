@@ -1,10 +1,14 @@
 <template>
 	<v-card class="card">
         <v-card-title class="card-title">
-            In-Game Timers
+            In-Game Timers<br>(Work in Progress)
         </v-card-title>
+        <v-card-subtitle class="card-subtitle">
+        	Current Game Time: {{ hours }}:{{minutes}} {{noonSwitch}}
+            <br>
+            Current Phase: {{ dayPhase }}
+        </v-card-subtitle>
         <v-card-text class="card-text">
-            Current Game Time: {{ gameHours }}:{{gameMinutes}}
         </v-card-text>
         <v-card-actions class="card-actions">
         </v-card-actions>
@@ -12,39 +16,40 @@
 </template>
 
 <script setup>
-	// https://palia.wiki.gg/wiki/Guide:Time_Passage_in_Palia
-	import { ref, onMounted } from 'vue'
+	import { ref, onMounted, watch } from 'vue'
+	import { timer } from '@/composables/timer.js'
 
 	// vars
 	const gameOffset = 5 // offset in game-minutes
+	const gameRatio = 1 / 24 // 1 real-world hour === 1 in-game day
 	var intervalId = 0
 	var counter = 0
 
 	// refs
 	const gameHours = ref(0)
 	const gameMinutes = ref(0)
+	//const noonSwitch = ref('')
+	const dayPhase = ref('')
+	const { days, hours, minutes, seconds, noonSwitch } = timer(gameRatio, currentGameTime(), false, false)
 
-	onMounted(() => {
-		setInitialTime()
-		intervalId = setInterval(() => {
-			updateTime()
-		}, 1000)
+	function currentGameTime() {
+		const now = new Date()
+		return (now.getUTCMinutes()  * 60 + now.getSeconds()) / gameRatio
+	}
+
+	function updatePhase() {
+		if (3 <= hours.value < 6 && noonSwitch.value === 'am') {
+			dayPhase.value = 'Morning'
+		} else if ((6 <= hours.value && noonSwitch.value === 'am') || (hours.value < 6 && noonSwitch.value === 'pm')) {
+			dayPhase.value = 'Day'
+		} else if (6 <= hours.value < 9 && noonSwitch.value === 'pm' ) {
+			dayPhase.value = 'Evening'
+		} else {	
+			dayPhase.value = 'Night'
+		}
+	}
+
+	watch(hours, async (newHours, oldHours) => {
+		updatePhase()
 	})
-
-	function updateTime() {
-		counter = mod(++counter, 60 * 60)
-		gameHours.value = Math.floor((counter/2.5+gameOffset)/60)
-		gameMinutes.value = Math.floor(mod(counter/2.5+gameOffset, 60))
-	}
-
-	function setInitialTime() {
-		const currentSeconds = mod(new Date() - (new Date()).getTimezoneOffset() * 60, 1000 * 60 * 60)
-		counter = currentSeconds/1000
-		gameHours.value = Math.floor((counter/2.5+gameOffset)/60)
-		gameMinutes.value = Math.floor(mod(counter/2.5+gameOffset, 60))
-	}
-
-	function mod(n, m) {
-	  return ((n % m) + m) % m;
-	}
 </script>

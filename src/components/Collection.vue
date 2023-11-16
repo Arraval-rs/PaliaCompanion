@@ -52,6 +52,7 @@
 		collection: Object
 	})
 
+	// swap this ref for a watcher on props.collection
 	const collectionRef = ref(useStorage(props.title, props.collection, localStorage, { mergeDefaults: (storageValue, defaults) => mergeStorage(storageValue, defaults) }))
 	localStorage.setItem('test', collectionRef.value)
 

@@ -7,6 +7,7 @@ export function timer(ratio = 1, initialTime = 0, countDown = false,  militaryTi
 	var intervalId = 0
 
 	// refs
+	const end = ref(0)
 	const count = ref(0)
 	const days = ref('0')
 	const hours = ref('00')
@@ -46,17 +47,18 @@ export function timer(ratio = 1, initialTime = 0, countDown = false,  militaryTi
 			}
 		}
 		days.value = Math.floor(count.value/day)
-		if (seconds.value < 10) {
+		if (seconds.value < 10 && !countDown) {
 			seconds.value = '0' + seconds.value
 		}
-		if (minutes.value < 10) {
+		if (minutes.value < 10 && !countDown) {
 			minutes.value = '0' + minutes.value
 		}
-		if (hours.value < 10) {
+		if (hours.value < 10 && !countDown) {
 			hours.value = '0' + hours.value
 		}
 		if (countDown && count.value === 0) {
 			count.value = resetTime
+			end.value++
 		}
 	}
 
@@ -65,12 +67,12 @@ export function timer(ratio = 1, initialTime = 0, countDown = false,  militaryTi
 	})
 
 	onMounted(() => {
-		count.value = initialTime
+		count.value = Math.floor(initialTime)
 		updateClock()
 		intervalId = setInterval(() => {
 			tick()
 		}, 1000 * ratio)
 	})
 
-	return { days, hours, minutes, seconds, noonSwitch }
+	return { days, hours, minutes, seconds, noonSwitch, end }
 }

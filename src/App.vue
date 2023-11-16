@@ -5,7 +5,11 @@
         <img class="logo" src="./assets/Logo.png" :width="100" :height="60">
         <v-toolbar-title class="header-title">(Unofficial) Companion</v-toolbar-title>
         <v-spacer></v-spacer>
-        <CountdownTimer class="header-item" @weeklyReset="resetVillagers" @dailyReset="resetDailies"/>
+        <p class="header-item">
+            Weekly Reset: {{ weekly.days }} days, {{ weekly.hours }} hours, {{ weekly.minutes }} minutes, {{ weekly.seconds }} seconds
+            <br>
+            Daily Reset: {{ daily.hours }} hours, {{ daily.minutes }} minutes, {{ daily.seconds }} seconds
+        </p>
     </v-app-bar>
     <v-navigation-drawer class="drawer" v-model="navDrawer" location="left" :width="200">
         <v-list nav>
@@ -14,7 +18,8 @@
             <v-list-item prepend-avatar="./assets/Bug.webp" class="list-item" title="Bugs" @click="navPage('/BugCollection'); infoDrawer=false"></v-list-item>
             <v-list-item prepend-avatar="./assets/Fish.webp" class="list-item" title="Fish" @click="navPage('/FishCollection'); infoDrawer=false"></v-list-item>
             <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Dishes" @click="navPage('/DishCollection'); infoDrawer=false"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Game Timers" @click="navPage('/GameTimers'); infoDrawer=false"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Furniture.webp" class="list-item" title="Furniture" @click="navPage('/FurnitureCollection'); infoDrawer=false"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Clock.webp" class="list-item" title="Game Timers" @click="navPage('/GameTimers'); infoDrawer=false"></v-list-item>
         </v-list>
     </v-navigation-drawer>
     <v-navigation-drawer class="drawer" v-model="infoDrawer" location="right" :width="325">
@@ -35,14 +40,14 @@
 </template>
 
 <script setup>
-    import { ref, computed } from 'vue'
+    import { ref, computed, watch } from 'vue'
     import { useRouter, useRoute } from 'vue-router'
     import { Bugs, Fish, Dishes } from '@/assets/collections.js'
-    import WeeklyWants from './components/WeeklyWants.vue'
-    import CountdownTimer from './components/CountdownTimer.vue'
-    import ItemInfo from './components/ItemInfo.vue'
+    import { timer } from '@/composables/timer.js'
+    import WeeklyWants from '@/components/WeeklyWants.vue'
+    import ItemInfo from '@/components/ItemInfo.vue'
 
-    // router info
+    // Router info
     const router = useRouter()
     const route = useRoute()
     var navDrawer = ref(true)
@@ -52,7 +57,30 @@
         router.push('/PaliaCompanion' + page)
     }
 
-    // Weekly wants info (update storage or push to event queue and wait for element to be active)
+    // Timer info
+    const weekly = timer(1, timeToWeeklyReset(), true, true, 7 * 24 * 60 * 60)
+    const daily = timer(1, mod(timeToWeeklyReset(), 24 * 60 * 60), true, true, 24 * 60 * 60)
+
+    watch(daily.end, (newDaily, oldDaily) => {
+        resetDailies()
+    })
+
+    watch(weekly.end, (newDaily, oldDaily) => {
+        resetVillagers()
+    })
+
+    function timeToWeeklyReset() {
+        const now = new Date()
+        const target = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 8 - now.getDay(), 4, -now.getTimezoneOffset())
+        const nextReset = mod(target.getTime() - now.getTime(), 1000 * 60 * 60 * 24 * 7) // difference mod 1 week
+        return nextReset / 1000
+    }
+
+    function mod(n, m) {
+      return ((n % m) + m) % m;
+    }
+
+    // Weekly wants info
     function resetVillagers() {
         if (typeof routerViewRef.value.clearVillagers === 'function') {
             routerViewRef.value.clearVillagers()

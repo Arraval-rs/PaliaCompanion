@@ -192,4 +192,11 @@ const Dishes = [
         ]
 ]
 
-export { Bugs, Fish, Dishes}
+const Furniture = [
+                [],
+                [],
+                [],
+                []
+]
+
+export { Bugs, Fish, Dishes, Furniture}
