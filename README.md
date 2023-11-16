@@ -1,5 +1,7 @@
 # base
 
+The site is live at https://codyc98.github.io/PaliaCompanion/
+
 I'll update this at some point ;)
 
 ## Project setup

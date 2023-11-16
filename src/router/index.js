@@ -1,7 +1,8 @@
 // Composables
 import { createRouter, createWebHistory } from 'vue-router'
-import { Bugs, Fish, Dishes } from '@/assets/collections.js'
+import { Bugs, Fish, Dishes, Furniture} from '@/assets/collections.js'
 import Collection from '@/components/Collection'
+import GameTimer from '@/components/GameTimer.vue'
 
 const BugCollection = Collection
 
@@ -12,6 +13,8 @@ const BugCollection = Collection
         { path: '/PaliaCompanion/BugCollection', component: Collection, props: { title: "Bug Collection", collection: Bugs}},
         { path: '/PaliaCompanion/FishCollection', component: Collection, props: { title: "Fish Collection", collection: Fish}},
         { path: '/PaliaCompanion/DishCollection', component: Collection, props: { title: "Dish Collection", collection: Dishes}},
+        { path: '/PaliaCompanion/FurnitureCollection', component: Collection, props: { title:"Furniture Collection", collection: Furniture}},
+        { path: '/PaliaCompanion/GameTimers', component: GameTimer},
         { path: '/PaliaCompanion/*', component: () => import('@/components/HomePage') }
     ]
 
