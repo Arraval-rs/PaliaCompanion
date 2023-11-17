@@ -76,7 +76,6 @@
 
 	const issues = [
 		"Mobile feels cluttered",
-		"Updating a collection item from another page does not update the collection (closes the drawer on nav for now)",
 		"Timers do not function correctly when out of focus (refresh solves)"
 	]
 </script>

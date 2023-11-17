@@ -9,22 +9,22 @@
 					<v-list-item class="list-item">
 						Common
 						<v-divider :thickness="dividerThickness" class="common-divider"></v-divider>
-						<CollectionDisplay :items="collectionRef[0]" @selected-collection-item="eventPassthrough($event, 0)"/>
+						<CollectionDisplay :items="collection[0]" @selected-collection-item="eventPassthrough($event, 0)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Uncommon
 						<v-divider :thickness="dividerThickness" class="uncommon-divider"></v-divider>
-						<CollectionDisplay :items="collectionRef[1]" @selected-collection-item="eventPassthrough($event, 1)"/>
+						<CollectionDisplay :items="collection[1]" @selected-collection-item="eventPassthrough($event, 1)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Rare
 						<v-divider :thickness="dividerThickness" class="rare-divider"></v-divider>
-						<CollectionDisplay :items="collectionRef[2]" @selected-collection-item="eventPassthrough($event, 2)"/>
+						<CollectionDisplay :items="collection[2]" @selected-collection-item="eventPassthrough($event, 2)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Epic
 						<v-divider :thickness="dividerThickness" class="epic-divider"></v-divider>
-						<CollectionDisplay :items="collectionRef[3]" @selected-collection-item="eventPassthrough($event, 3)"/>
+						<CollectionDisplay :items="collection[3]" @selected-collection-item="eventPassthrough($event, 3)"/>
 					</v-list-item>
 				</v-list>
 			</div>
@@ -52,14 +52,10 @@
 		collection: Object
 	})
 
-	// swap this ref for a watcher on props.collection
-	const collectionRef = ref(useStorage(props.title, props.collection, localStorage, { mergeDefaults: (storageValue, defaults) => mergeStorage(storageValue, defaults) }))
-	localStorage.setItem('test', collectionRef.value)
-
 	function resetCollection() {
-		for (let i = 0; i < collectionRef.value.length; i++) {
-			for (let j = 0; j < collectionRef.value[i].length; j++) {
-				collectionRef.value[i][j].status = 'No'
+		for (let i = 0; i < collection.value.length; i++) {
+			for (let j = 0; j < collection.value[i].length; j++) {
+				collection.value[i][j].status = 'No'
 			}
 		}
 	}
