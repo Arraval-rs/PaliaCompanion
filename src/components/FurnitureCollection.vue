@@ -19,7 +19,7 @@
 									<tr v-for="i in Math.ceil(set.pieces.length/5)">
 										<td v-for="(j, index) in set.pieces.slice(5*(i-1), 5*(i-1)+5)">
 											<button>
-												<img class="item-image" :src="imagePath(set.Name, j.Name)" :alt="j.Name">
+												<img class="item-image" :src="imagePath(set.Name, j.Name)">
 											</button>
 											<p v-text="j.Name"></p>
 										</td>
