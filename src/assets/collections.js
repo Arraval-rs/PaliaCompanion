@@ -192,11 +192,80 @@ const Dishes = [
         ]
 ]
 
-const Furniture = [
-                [],
-                [],
-                [],
-                []
-]
+//https://palia.wiki.gg/wiki/Homestead_Furniture_Set#Set_Pieces
+        const Furniture = [
+                                { Name: 'Bellflower', pieces:    [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Capital Chic', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Chapaa Hut', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Dragontide', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Emberborn', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Garden Variety', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Homestead', pieces:       [ 
+                                                                        { Name: "Alarm Clock", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Industrial', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Kilima', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Kilima Rummage Piles', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Log Cabin', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Maji Market', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Makeshift', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Moonstruck', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Ranch House', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Ravenwood', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Spooky', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                },
+                                { Name: 'Valley Sunrise', pieces:       [ 
+                                                                        { Name: "", status: "No" } 
+                                                                ]
+                                }
+                        ]
 
 export { Bugs, Fish, Dishes, Furniture}

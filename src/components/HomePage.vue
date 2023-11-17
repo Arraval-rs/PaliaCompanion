@@ -52,7 +52,9 @@
         </v-card-text>
         <v-card-actions class="card-actions">
             <p>
-            	This is a fan-made website and is not affiliated with Palia or Singularity 6. <br>
+            	This is a fan-made website and is not affiliated with Palia or Singularity 6. Make sure to check out the official 
+            	<a href="https://palia.wiki.gg/wiki/Palia_Wiki" target="_blank">wiki</a>!
+            	<br>
             	This site is built and maintained by Arraval. For any bug reports or feature requests please open an issue on 
             	<a href="https://github.com/CodyC98/PaliaCompanion/issues" target="_blank">github</a>.
         	</p>
@@ -67,7 +69,7 @@
 	const plannedFeatures = [
 		"Add details to each collection's items (check out Bahari Crabs!)",
 		"In-game time tracker for limited bugs/fish needed for weekly wants and collections8",
-		"Addition of furniture collection",
+		"Completion of furniture collection",
 		"Light/Dark mode toggle",
 		"'Condensed' setting (only lists/checkboxes instead of images) if there is interest"
 	]
