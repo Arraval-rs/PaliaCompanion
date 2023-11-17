@@ -1,6 +1,6 @@
 # base
 
-The site is live at https://codyc98.github.io/PaliaCompanion/
+The site is live at https://arraval-rs.github.io/PaliaCompanion/
 
 I'll update this at some point ;)
 
