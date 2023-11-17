@@ -6,7 +6,7 @@
         <v-card-text class="card-text">
             <div>
 				<v-expansion-panels>
-					<v-expansion-panel v-for="set in props.collection">
+					<v-expansion-panel v-for="(set, colIndex) in collection">
 						<v-expansion-panel-title>
 							{{ set.Name }} Furniture
 						</v-expansion-panel-title>
@@ -18,7 +18,8 @@
 								<tbody>
 									<tr v-for="i in Math.ceil(set.pieces.length/5)">
 										<td v-for="(j, index) in set.pieces.slice(5*(i-1), 5*(i-1)+5)">
-											<button>
+											<button @click="updateFurniture(colIndex, 5*(i-1)+index)" :class="{ 	'image-button-clicked': j.status === 'No', 
+																			'image-button':  j.status === 'Yes' }">
 												<img class="item-image" :src="imagePath(set.Name, j.Name)">
 											</button>
 											<p v-text="j.Name"></p>
@@ -40,9 +41,18 @@
 </template>
 
 <script setup>
-	const props = defineProps({
-		collection: Array
-	})
+	import { ref } from 'vue'
+	import { Furniture } from '@/assets/collections.js'
+
+	const collection = ref(Furniture)
+
+	function updateFurniture(collectionIndex, pieceIndex) {
+		if (collection.value[collectionIndex].pieces[pieceIndex].status === 'No') {
+			collection.value[collectionIndex].pieces[pieceIndex].status = 'Yes'
+		} else {
+			collection.value[collectionIndex].pieces[pieceIndex].status = 'No'
+		}
+	}
 
 	function resetCollection() {
 		for (let i = 0; i < collectionRef.value.length; i++) {

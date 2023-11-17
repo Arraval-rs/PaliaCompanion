@@ -14,7 +14,7 @@ const BugCollection = Collection
         { path: '/PaliaCompanion/BugCollection', component: Collection, props: { title: "Bug Collection", collection: Bugs}},
         { path: '/PaliaCompanion/FishCollection', component: Collection, props: { title: "Fish Collection", collection: Fish}},
         { path: '/PaliaCompanion/DishCollection', component: Collection, props: { title: "Dish Collection", collection: Dishes}},
-        { path: '/PaliaCompanion/FurnitureCollection', component: FurnitureCollection, props: { collection: Furniture}},
+        { path: '/PaliaCompanion/FurnitureCollection', component: FurnitureCollection},
         { path: '/PaliaCompanion/GameTimers', component: GameTimer},
         { path: '/PaliaCompanion/*', component: () => import('@/components/HomePage')}
     ]
