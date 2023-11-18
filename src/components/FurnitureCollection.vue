@@ -6,7 +6,7 @@
         <v-card-text class="card-text">
             <div>
 				<v-expansion-panels>
-					<v-expansion-panel v-for="(set, colIndex) in collection">
+					<v-expansion-panel class="expansion-panel" v-for="(set, colIndex) in collection">
 						<v-expansion-panel-title>
 							{{ set.Name }} Furniture
 						</v-expansion-panel-title>

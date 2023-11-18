@@ -27,9 +27,9 @@
 					New!
 				</h1>
 				<v-divider class="homepage-divider" :thickness="dividerThickness"></v-divider>
-				<p>
-					Everything right now lol
-				</p>
+				<h2>
+					The 'Game Time' tab! This tab tracks the in-game time and displays bugs and fish needed for weekly wants or collection completion based on the in-game day phase.
+				</h2>
 				<h1 class="homepage-header">
 					Planned Features
 				</h1>
@@ -51,7 +51,7 @@
 			</div>
         </v-card-text>
         <v-card-actions class="card-actions">
-            <p>
+            <p class="disclaimer">
             	This is a fan-made website and is not affiliated with Palia or Singularity 6. Make sure to check out the official 
             	<a href="https://palia.wiki.gg/wiki/Palia_Wiki" target="_blank">wiki</a>!
             	<br>
@@ -67,8 +67,7 @@
 	const dividerThickness = 4
 
 	const plannedFeatures = [
-		"Add details to each collection's items (check out Bahari Crabs!)",
-		"In-game time tracker for limited bugs/fish needed for weekly wants and collections8",
+		"Add details to dishes",
 		"Completion of furniture collection",
 		"Light/Dark mode toggle",
 		"'Condensed' setting (only lists/checkboxes instead of images) if there is interest"
@@ -76,7 +75,6 @@
 
 	const issues = [
 		"Mobile feels cluttered",
-		"Updating a collection item from another page does not update the collection (closes the drawer on nav for now)",
 		"Timers do not function correctly when out of focus (refresh solves)"
 	]
 </script>

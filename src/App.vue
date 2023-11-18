@@ -14,12 +14,12 @@
     <v-navigation-drawer class="drawer" v-model="navDrawer" location="left" :width="200">
         <v-list nav>
             <v-list-item prepend-avatar="./assets/Home.png" class="list-item" title="Home" @click="navPage('/'); infoDrawer=false"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Gift.webp" class="list-item" title="Weekly Wants" @click="navPage('/WeeklyWants'); infoDrawer=false"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Bug.webp" class="list-item" title="Bugs" @click="navPage('/BugCollection'); infoDrawer=false"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Fish.webp" class="list-item" title="Fish" @click="navPage('/FishCollection'); infoDrawer=false"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Dishes" @click="navPage('/DishCollection'); infoDrawer=false"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Furniture.webp" class="list-item" title="Furniture" @click="navPage('/FurnitureCollection'); infoDrawer=false"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Clock.webp" class="list-item" title="Game Timers" @click="navPage('/GameTimers'); infoDrawer=false"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Gift.webp" class="list-item" title="Weekly Wants" @click="navPage('/WeeklyWants')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Bug.webp" class="list-item" title="Bugs" @click="navPage('/BugCollection')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Fish.webp" class="list-item" title="Fish" @click="navPage('/FishCollection')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Dishes" @click="navPage('/DishCollection')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Furniture.webp" class="list-item" title="Furniture" @click="navPage('/FurnitureCollection')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Clock.webp" class="list-item" title="Game Time" @click="navPage('/GameTimers')"></v-list-item>
         </v-list>
     </v-navigation-drawer>
     <v-navigation-drawer class="drawer" v-model="infoDrawer" location="right" :width="325">

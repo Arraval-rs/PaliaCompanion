@@ -65,6 +65,10 @@
   margin: 30px;
 }
 
+.thumbnail {
+  width:  10%;
+}
+
 .homepage-top-header {
   margin: 0px 10px 10px 10px;
 }
@@ -115,6 +119,7 @@
 .card-subtitle {
   background-color: var(--color-background);
   color: var(--vt-c-white-soft);
+  height: 5%;
 }
 
 .card-text {
@@ -129,8 +134,15 @@
 
 .card-actions {
   height:  10%;
+  padding: 20px !important;
   background-color: var(--color-background-soft);
   color: var(--vt-c-white-soft);
+  overflow-y: scroll;
+}
+
+.disclaimer {
+  line-height: 1;
+  margin-top: 10px;
 }
 
 .flex-container {
@@ -175,6 +187,20 @@
   text-align: center;
   width: 100%;
   table-layout: fixed; 
+}
+
+.image-paragraph {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.expansion-panel {
+  background-color: var(--color-background-mute) !important;
+  color: var(--vt-c-white-soft) !important;
+}
+
+p {
+  padding: 10px;
 }
 
 a {
