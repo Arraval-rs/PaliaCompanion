@@ -19,7 +19,7 @@
             <v-list-item prepend-avatar="./assets/Fish.webp" class="list-item" title="Fish" @click="navPage('/FishCollection')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Cooking.webp" class="list-item" title="Dishes" @click="navPage('/DishCollection')"></v-list-item>
             <v-list-item prepend-avatar="./assets/Furniture.webp" class="list-item" title="Furniture" @click="navPage('/FurnitureCollection')"></v-list-item>
-            <v-list-item prepend-avatar="./assets/Clock.webp" class="list-item" title="Game Timers" @click="navPage('/GameTimers')"></v-list-item>
+            <v-list-item prepend-avatar="./assets/Clock.webp" class="list-item" title="Game Time" @click="navPage('/GameTimers')"></v-list-item>
         </v-list>
     </v-navigation-drawer>
     <v-navigation-drawer class="drawer" v-model="infoDrawer" location="right" :width="325">

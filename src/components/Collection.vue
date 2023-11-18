@@ -9,22 +9,22 @@
 					<v-list-item class="list-item">
 						Common
 						<v-divider :thickness="dividerThickness" class="common-divider"></v-divider>
-						<CollectionDisplay :items="collection[0]" @selected-collection-item="eventPassthrough($event, 0)"/>
+						<CollectionDisplay :fadeButtons="true" :items="collection[0]" @selected-collection-item="eventPassthrough($event, 0)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Uncommon
 						<v-divider :thickness="dividerThickness" class="uncommon-divider"></v-divider>
-						<CollectionDisplay :items="collection[1]" @selected-collection-item="eventPassthrough($event, 1)"/>
+						<CollectionDisplay :fadeButtons="true" :items="collection[1]" @selected-collection-item="eventPassthrough($event, 1)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Rare
 						<v-divider :thickness="dividerThickness" class="rare-divider"></v-divider>
-						<CollectionDisplay :items="collection[2]" @selected-collection-item="eventPassthrough($event, 2)"/>
+						<CollectionDisplay :fadeButtons="true" :items="collection[2]" @selected-collection-item="eventPassthrough($event, 2)"/>
 					</v-list-item>
 					<v-list-item class="list-item">
 						Epic
 						<v-divider :thickness="dividerThickness" class="epic-divider"></v-divider>
-						<CollectionDisplay :items="collection[3]" @selected-collection-item="eventPassthrough($event, 3)"/>
+						<CollectionDisplay :fadeButtons="true" :items="collection[3]" @selected-collection-item="eventPassthrough($event, 3)"/>
 					</v-list-item>
 				</v-list>
 			</div>

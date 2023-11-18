@@ -119,6 +119,7 @@
 .card-subtitle {
   background-color: var(--color-background);
   color: var(--vt-c-white-soft);
+  height: 5%;
 }
 
 .card-text {
@@ -184,6 +185,11 @@
 .image-paragraph {
   vertical-align: middle;
   display: inline-block;
+}
+
+.expansion-panel {
+  background-color: var(--color-background-mute) !important;
+  color: var(--vt-c-white-soft) !important;
 }
 
 p {
