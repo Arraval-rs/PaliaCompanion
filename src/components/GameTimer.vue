@@ -77,11 +77,11 @@
 	}
 
 	function updatePhase() {
-		if (3 <= hours.value < 6 && noonSwitch.value === 'am') {
+		if (3 <= parseInt(hours.value, 10) && parseInt(hours.value, 10) < 6 && noonSwitch.value === 'am') {
 			dayPhase.value = 'Morning'
-		} else if ((6 <= hours.value && noonSwitch.value === 'am') || (hours.value < 6 && noonSwitch.value === 'pm')) {
+		} else if ((6 <= parseInt(hours.value, 10) && noonSwitch.value === 'am') || (parseInt(hours.value, 10) < 6 && noonSwitch.value === 'pm')) {
 			dayPhase.value = 'Day'
-		} else if (6 <= hours.value < 9 && noonSwitch.value === 'pm' ) {
+		} else if (6 <= parseInt(hours.value, 10) && parseInt(hours.value, 10) < 9 && noonSwitch.value === 'pm' ) {
 			dayPhase.value = 'Evening'
 		} else {	
 			dayPhase.value = 'Night'
