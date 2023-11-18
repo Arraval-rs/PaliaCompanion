@@ -51,7 +51,7 @@
 			</div>
         </v-card-text>
         <v-card-actions class="card-actions">
-            <p>
+            <p class="disclaimer">
             	This is a fan-made website and is not affiliated with Palia or Singularity 6. Make sure to check out the official 
             	<a href="https://palia.wiki.gg/wiki/Palia_Wiki" target="_blank">wiki</a>!
             	<br>
