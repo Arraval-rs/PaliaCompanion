@@ -65,6 +65,10 @@
   margin: 30px;
 }
 
+.thumbnail {
+  width:  10%;
+}
+
 .homepage-top-header {
   margin: 0px 10px 10px 10px;
 }
@@ -175,6 +179,15 @@
   text-align: center;
   width: 100%;
   table-layout: fixed; 
+}
+
+.image-paragraph {
+  vertical-align: middle;
+  display: inline-block;
+}
+
+p {
+  padding: 10px;
 }
 
 a {
