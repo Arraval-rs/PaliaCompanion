@@ -8,7 +8,7 @@ const Villagers =       [
                             {Name: 'Auni', dailyGift: false, romance: false, weeklyRomance: false, weeklyWants:    [
                                                                                                         {Name: "Unopened Oyster", Gifted: false}, 
                                                                                                         {Name: "Garden Mantis", Gifted: false}, 
-                                                                                                        {Name: "Firebreathing Dragonfly", Gifted: false}, 
+                                                                                                        {Name: "Spotted Mantis", Gifted: false}, 
                                                                                                         {Name: "Apple Pie", Gifted: false}
                                                                                                     ]},
                             {Name: 'Badruu', dailyGift: false, romance: false, weeklyRomance: false, weeklyWants:  [
@@ -18,19 +18,19 @@ const Villagers =       [
                                                                                                         {Name: "Meaty Stir Fry", Gifted: false}
                                                                                                     ]},
                             {Name: 'Caleri', dailyGift: false, romance: false, weeklyRomance: false, weeklyWants:  [
-                                                                                                        {Name: "Emerald Carpet Moss", Gifted: false}, 
+                                                                                                        {Name: "Coral", Gifted: false}, 
                                                                                                         {Name: "Pickled Carrots", Gifted: false}, 
                                                                                                         {Name: "Silk Thread", Gifted: false}, 
                                                                                                         {Name: "Dari Cloves", Gifted: false}
                                                                                                     ]},
                             {Name: 'Chayne', dailyGift: false, romance: false, weeklyRomance: false, weeklyWants:  [
-                                                                                                        {Name: "Onion Seed", Gifted: false}, 
+                                                                                                        {Name: "Potato Seed", Gifted: false}, 
                                                                                                         {Name: "Juniper Seed", Gifted: false}, 
                                                                                                         {Name: "Blueberries", Gifted: false}, 
                                                                                                         {Name: "Palian Onion Soup", Gifted: false}
                                                                                                     ]},
                             {Name: 'Delaila', dailyGift: false, romance: false, weeklyRomance: false, weeklyWants: [
-                                                                                                        {Name: "Rainbow Trout", Gifted: false}, 
+                                                                                                        {Name: "Clay", Gifted: false}, 
                                                                                                         {Name: "Wheat Seed", Gifted: false}, 
                                                                                                         {Name: "Shepp's Pie", Gifted: false}, 
                                                                                                         {Name: "Gold Bar", Gifted: false}
@@ -50,11 +50,11 @@ const Villagers =       [
                             {Name: 'Eshe', dailyGift: false, romance: false, weeklyRomance: false, weeklyWants:    [
                                                                                                         {Name: "Fur", Gifted: false}, 
                                                                                                         {Name: "Bluefin Tuna", Gifted: false}, 
-                                                                                                        {Name: "Silver Bar", Gifted: false}, 
+                                                                                                        {Name: "Macaron", Gifted: false}, 
                                                                                                         {Name: "Palian Onion Soup", Gifted: false}
                                                                                                     ]},
                             {Name: 'Hassian', dailyGift: false, romance: true, weeklyRomance: false, weeklyWants: [
-                                                                                                        {Name: "Sernuk Antlers", Gifted: false}, 
+                                                                                                        {Name: "Fur", Gifted: false}, 
                                                                                                         {Name: "Chapaa Asada Tacos", Gifted: false}, 
                                                                                                         {Name: "Proudhorned Sernuk Antlers", Gifted: false}, 
                                                                                                         {Name: "Slowdown Arrow", Gifted: false}
@@ -66,7 +66,7 @@ const Villagers =       [
                                                                                                         {Name: "Green Pearl", Gifted: false}
                                                                                                     ]},
                             {Name: 'Hodari', dailyGift: false, romance: true, weeklyRomance: false, weeklyWants:  [
-                                                                                                        {Name: "Leather", Gifted: false}, 
+                                                                                                        {Name: "Spotted Chapaa Tail", Gifted: false}, 
                                                                                                         {Name: "Copper Bar", Gifted: false}, 
                                                                                                         {Name: "Stonefish", Gifted: false}, 
                                                                                                         {Name: "Spitfire Cicada", Gifted: false}
@@ -74,8 +74,8 @@ const Villagers =       [
                             {Name: 'Jel', dailyGift: false, romance: true, weeklyRomance: false, weeklyWants:     [
                                                                                                         {Name: "Coral", Gifted: false}, 
                                                                                                         {Name: "Freshwater Eel", Gifted: false}, 
-                                                                                                        {Name: "Vampire Crab", Gifted: false}, 
-                                                                                                        {Name: "Green Pearl", Gifted: false}
+                                                                                                        {Name: "Petit Fives", Gifted: false}, 
+                                                                                                        {Name: "Bluebristle Muujin Mane", Gifted: false}
                                                                                                     ]},
                             {Name: 'Jina', dailyGift: false, romance: true, weeklyRomance: false, weeklyWants:    [
                                                                                                         {Name: "Wagon Wheel", Gifted: false}, 
@@ -92,8 +92,8 @@ const Villagers =       [
                             {Name: 'Kenyatta', dailyGift: false, romance: true, weeklyRomance: false, weeklyWants:[
                                                                                                         {Name: "Crystal Lake Lotus", Gifted: false}, 
                                                                                                         {Name: "Cutthroat Trout", Gifted: false}, 
-                                                                                                        {Name: "Proudhorned Sernuk Antlers", Gifted: false}, 
-                                                                                                        {Name: "Fairy Mantis", Gifted: false}
+                                                                                                        {Name: "Firebreathing Dragonfly", Gifted: false}, 
+                                                                                                        {Name: "Bluebristle Muujin Mane", Gifted: false}
                                                                                                     ]},
                             {Name: 'Nai\'O', dailyGift: false, romance: true, weeklyRomance: false, weeklyWants:  [
                                                                                                         {Name: "Wagon Wheel", Gifted: false}, 
@@ -119,6 +119,12 @@ const Villagers =       [
                                                                                                         {Name: "Iron Bar", Gifted: false}, 
                                                                                                         {Name: "Swordfin Eel", Gifted: false}
                                                                                                     ]},
+                            {Name: 'Subira', dailyGift: false, romace: false, weeklyRomance: false, weeklyWants:   [
+                                                                                                        {Name: "Flow-Infused Wood", Gifted: false}, 
+                                                                                                        {Name: "Gold Bar", Gifted: false}, 
+                                                                                                        {Name: "Dari Cloves", Gifted: false}, 
+                                                                                                        {Name: "Firebreathing Dragonfly", Gifted: false}
+                                                                                                    ]},
                             {Name: 'Tamala', dailyGift: false, romance: true, weeklyRomance: false, weeklyWants:  [
                                                                                                         {Name: "Fur", Gifted: false}, 
                                                                                                         {Name: "Garden Millipede", Gifted: false}, 
@@ -134,13 +140,13 @@ const Villagers =       [
                             {Name: 'Tish', dailyGift: false, romance: true, weeklyRomance: false, weeklyWants:    [
                                                                                                         {Name: "Sapwood Plank", Gifted: false}, 
                                                                                                         {Name: "Samara", Gifted: false}, 
-                                                                                                        {Name: "Pearl", Gifted: false}, 
+                                                                                                        {Name: "Petit Fives", Gifted: false}, 
                                                                                                         {Name: "Blueberry Pie", Gifted: false}
                                                                                                     ]},
                             {Name: 'Zeki', dailyGift: false, romance: false, weeklyRomance: false, weeklyWants:    [
                                                                                                         {Name: "Silvery Minnow", Gifted: false}, 
                                                                                                         {Name: "Fish Stew", Gifted: false}, 
-                                                                                                        {Name: "Fish Tacos", Gifted: false}, 
+                                                                                                        {Name: "Oysters Akwinduu", Gifted: false}, 
                                                                                                         {Name: "Bouillabaisse", Gifted: false}
                                                                                                     ]}
 ]
@@ -175,7 +181,7 @@ const Bugs = [
                 { Name: "Bahari Glowbug", status: "No", additionalDetails: "<p>Location: Bahari Bay</p><p>Biome: Bahari Fields</p><p>Appears: Evening, Night</p><br><h1>Description</h1><p>A local species of bioluminescent fauna. Discovered by Professor Bonlin Amepongo.<br>Found in the fields of Bahari Bay during the evening and night.</p>"},
                 { Name: "Brighteye Butterfly", status: "No", additionalDetails: "<p>Location: Bahari Bay</p><p>Biome: Bahari Forest</p><p>Appears: Morning, Day</p><br><h1>Description</h1><p>Whenever you see the sun out, you can see the eyes of this intricately patterned butterfly looking around Bahari Bay.<br>Found in the forests of Bahari Bay during the morning and day.</p>"},
                 { Name: "Firebreathing Dragonfly", status: "No", additionalDetails: "<p>Location: Kilima Valley</p><p>Biome: Kilima Fields</p><p>Appears: Any Time</p><br><h1>Description</h1><p>This Dragonfly is notoriously difficult to catch, in part due to its fiery breath.<br>Found in the fields of Kilima.</p>"},
-                { Name: "Golden Glory Bee", status: "No", additionalDetails: "<p>Location: Kilima Valley</p><p>Biome: Kilima Fields</p><p>Appears: Morning, Day</p><br><h1>Description</h1><p>A rare bee, imported from the Akwindu province. Mead made from this bee's honey is said to be heavily consumed by the queen of the province and her family.<br>Has a chance to be found when chopping trees in Kilima during the morning and day.</p>"},
+                { Name: "Golden Glory Bee", status: "No", additionalDetails: "<p>Location: Kilima Valley</p><p>Biome: Kilima Fields</p><p>Appears: Morning, Day</p><br><h1>Description</h1><p>A rare bee, imported from the Akwinduu province. Mead made from this bee's honey is said to be heavily consumed by the queen of the province and her family.<br>Has a chance to be found when chopping trees in Kilima during the morning and day.</p>"},
                 { Name: "Gossamer Veil Moth", status: "No", additionalDetails: "<p>Location: Kilima Valley</p><p>Biome: Kilima Fields</p><p>Appears: Evening, Night</p><br><h1>Description</h1><p>The wings of this moth are so thin that some say you can see a peek of the Dragon Realm by looking through them.<br>Found in the fields of Kilima during the evening and night.</p>"},
                 { Name: "Hairy Millipede", status: "No", additionalDetails: "<p>Location: Bahari Bay</p><p>Biome: Bahari Forest</p><p>Appears: Any Time</p><br><h1>Description</h1><p>A millipede with a hair growth problem.<br>Found in the forests of Bahari Bay.</p>"},
                 { Name: "Leafstalker Mantis", status: "No", additionalDetails: "<p>Location: Bahari Bay</p><p>Biome: Bahari Forest</p><p>Appears: Any Time</p><br><h1>Description</h1><p>A herbivorous mantis that exclusively eats leaves.<br>Has a chance to be found when foraging in the forests of Bahari bay.</p>"},
@@ -336,7 +342,11 @@ const Dishes = [
                 { Name: "Chapaa Masala", status: "No", additionalDetails: "placeholder"},
                 { Name: "Poke Bowl", status: "No", additionalDetails: "placeholder"},
                 { Name: "Spicy Rice Cakes", status: "No", additionalDetails: "placeholder"}
-        ]
+        ],
+                { Name: "Petit Fives", status: "No", additionalDetails: "placeholder" },
+                { Name: "Oysters Akwinduu", status: "No", additionalDetails: "placeholder" },
+                { Name: "Muujin Bahari", status: "No", additionalDetails: "placeholder" },
+                { Name: "Congee", status: "No", additionalDetails: "placeholder" }
 ]
 
 // https://palia.wiki.gg/wiki/Furniture/Sets_Catalogue
