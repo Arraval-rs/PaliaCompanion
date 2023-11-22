@@ -12,4 +12,5 @@ export function registerPlugins (app) {
   app
     .use(vuetify)
     .use(router)
+    router.push('/PaliaCompanion/')
 }

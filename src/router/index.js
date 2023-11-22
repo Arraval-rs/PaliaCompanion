@@ -1,7 +1,7 @@
 // Composables
 import { ref } from 'vue'
 import { useStorage } from '@vueuse/core';
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createMemoryHistory } from 'vue-router'
 import { Villagers, Bugs, Fish, Dishes, Furniture} from '@/assets/collections.js'
 import WeeklyWants from '@/components/WeeklyWants'
 import Collection from '@/components/Collection'
@@ -26,7 +26,7 @@ const DishCollection = ref(useStorage("Dish Collection", Dishes, localStorage, {
     ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createMemoryHistory(),
   routes,
 })
 
