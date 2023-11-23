@@ -9,11 +9,15 @@ assignees: ''
 
 **What pages does this affect?**
 - [ ] All
-- [ ] Home
-- [ ] Weekly Wants
-- [ ] Bugs
-- [ ] Fish
-- [ ] Dishes
+- [ ] Home Page
+- [ ] Weekly Wants Page
+- [ ] Bugs Page
+- [ ] Fish Page
+- [ ] Dishes Page
+- [ ] Furniture Page
+- [ ] Navigation Drawer (left side)
+- [ ] Information Drawer (right side)
+- [ ] Header
 - [ ] New Page
 
 **Is your feature request related to a problem? Please describe.**

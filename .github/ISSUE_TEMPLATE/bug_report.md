@@ -7,13 +7,17 @@ assignees: ''
 
 ---
 
-**What pages does this affect?**
+**What component(s) does this affect?**
 - [ ] All
-- [ ] Home
-- [ ] Weekly Wants
-- [ ] Bugs
-- [ ] Fish
-- [ ] Dishes
+- [ ] Home Page
+- [ ] Weekly Wants Page
+- [ ] Bugs Page
+- [ ] Fish Page
+- [ ] Dishes Page
+- [ ] Furniture Page
+- [ ] Navigation Drawer (left side)
+- [ ] Information Drawer (right side)
+- [ ] Header
 
 **Describe the bug**
 A clear and concise description of what the bug is.
