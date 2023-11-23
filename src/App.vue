@@ -42,7 +42,9 @@
 <script setup>
     import { ref, computed, watch } from 'vue'
     import { useRouter, useRoute } from 'vue-router'
-    import { Bugs, Fish, Dishes } from '@/assets/collections.js'
+    import Bugs from '@/assets/Collections/Bugs.json'
+    import Fish from '@/assets/Collections/Fish.json'
+    import Dishes from '@/assets/Collections/Dishes.json'
     import { timer } from '@/composables/timer.js'
     import WeeklyWants from '@/components/WeeklyWants.vue'
     import ItemInfo from '@/components/ItemInfo.vue'

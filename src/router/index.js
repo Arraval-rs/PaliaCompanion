@@ -2,11 +2,15 @@
 import { ref } from 'vue'
 import { useStorage } from '@vueuse/core';
 import { createRouter, createMemoryHistory } from 'vue-router'
-import { Villagers, Bugs, Fish, Dishes, Furniture} from '@/assets/collections.js'
 import WeeklyWants from '@/components/WeeklyWants'
 import Collection from '@/components/Collection'
 import GameTimer from '@/components/GameTimer.vue'
 import FurnitureCollection from '@/components/FurnitureCollection.vue'
+import Bugs from '@/assets/Collections/Bugs.json'
+import Fish from '@/assets/Collections/Fish.json'
+import Dishes from '@/assets/Collections/Dishes.json'
+import Furniture from '@/assets/Collections/Furniture.json'
+import Villagers from '@/assets/Collections/Villagers.json'
 
 const VillagerCollection = ref(useStorage('Villagers', Villagers, localStorage, { mergeDefaults: (storageValue, defaults) => mergeVillagers(storageValue, defaults) }))
 const BugCollection = ref(useStorage("Bug Collection", Bugs, localStorage, { mergeDefaults: (storageValue, defaults) => mergeCollection(storageValue, defaults) }))
@@ -34,10 +38,12 @@ function mergeCollection(storageValue, defaults) {
     var newValues = defaults
     for (let i = 0; i < storageValue.length; i++) {
         for (let j = 0; j < storageValue[i].length; j++) {
-            for (let k = 0; k < storageValue[i].length; k++) {
-                if (storageValue[i][j].Name === newValues[i][k].Name) {
-                    //console.log('Assigning status ' + storageValue[i][j].status + ' for ' + storageValue[i][j].Name + ' to ' + newValues[i][k].Name)
-                    newValues[i][k].status = storageValue[i][k].status
+            if(storageValue[i][j].status !== 'No') {
+                for (let k = 0; k < newValues[i].length; k++) {
+                    if (storageValue[i][j].Name === newValues[i][k].Name) {
+                        console.log("Assigning status '" + storageValue[i][j].status + "' to " + newValues[i][k].Name + " from storage")
+                        newValues[i][k].status = storageValue[i][k].status
+                    }
                 }
             }
         }
