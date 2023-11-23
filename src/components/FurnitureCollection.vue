@@ -42,7 +42,7 @@
 
 <script setup>
 	import { ref } from 'vue'
-	import { Furniture } from '@/assets/collections.js'
+	import Furniture from '@/assets/Collections/Furniture.json'
 
 	const collection = ref(Furniture)
 
