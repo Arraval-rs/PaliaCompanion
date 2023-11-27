@@ -1,152 +1,152 @@
 [
                             {"Name": "Ashura", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants": [
-                                                                                                        {"Name": "Grilled Fish", "Gifted": false},
-                                                                                                        {"Name": "Kilima Catfish", "Gifted": false},
-                                                                                                        {"Name": "Crab Pot Pie", "Gifted": false},
+                                                                                                        {"Name": "Channel Catfish", "Gifted": false},
+                                                                                                        {"Name": "Golden Salmon", "Gifted": false},
+                                                                                                        {"Name": "Flow-Infused Plank", "Gifted": false},
                                                                                                         {"Name": "Fisherman's Brew", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Auni", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":    [
-                                                                                                        {"Name": "Unopened Oyster", "Gifted": false}, 
-                                                                                                        {"Name": "Garden Mantis", "Gifted": false}, 
-                                                                                                        {"Name": "Spotted Mantis", "Gifted": false}, 
+                                                                                                        {"Name": "Common Bark Cicada", "Gifted": false}, 
+                                                                                                        {"Name": "Cerulean Cicada", "Gifted": false}, 
+                                                                                                        {"Name": "Scintillating Centipede", "Gifted": false}, 
                                                                                                         {"Name": "Apple Pie", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Badruu", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":  [
-                                                                                                        {"Name": "Carrot Seed", "Gifted": false}, 
-                                                                                                        {"Name": "Wheat", "Gifted": false}, 
-                                                                                                        {"Name": "Blueberry Bush Seed", "Gifted": false}, 
+                                                                                                        {"Name": "Rosy Bitterling", "Gifted": false}, 
+                                                                                                        {"Name": "Orange Bluegill", "Gifted": false}, 
+                                                                                                        {"Name": "Apple Tree Seed", "Gifted": false}, 
                                                                                                         {"Name": "Meaty Stir Fry", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Caleri", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":  [
-                                                                                                        {"Name": "Coral", "Gifted": false}, 
-                                                                                                        {"Name": "Pickled Carrots", "Gifted": false}, 
-                                                                                                        {"Name": "Silk Thread", "Gifted": false}, 
-                                                                                                        {"Name": "Dari Cloves", "Gifted": false}
+                                                                                                        {"Name": "Grilled Oyster", "Gifted": false}, 
+                                                                                                        {"Name": "Heat Root", "Gifted": false}, 
+                                                                                                        {"Name": "Pinecone", "Gifted": false}, 
+                                                                                                        {"Name": "Bouillabaisse", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Chayne", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":  [
-                                                                                                        {"Name": "Potato Seed", "Gifted": false}, 
-                                                                                                        {"Name": "Juniper Seed", "Gifted": false}, 
-                                                                                                        {"Name": "Blueberries", "Gifted": false}, 
-                                                                                                        {"Name": "Palian Onion Soup", "Gifted": false}
+                                                                                                        {"Name": "Onion Seed", "Gifted": false}, 
+                                                                                                        {"Name": "Creamy Carrot Soup", "Gifted": false}, 
+                                                                                                        {"Name": "Dragon's Beard Peat", "Gifted": false}, 
+                                                                                                        {"Name": "Green Pearl", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Delaila", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants": [
-                                                                                                        {"Name": "Clay", "Gifted": false}, 
+                                                                                                        {"Name": "Calico Koi", "Gifted": false}, 
                                                                                                         {"Name": "Wheat Seed", "Gifted": false}, 
-                                                                                                        {"Name": "Shepp's Pie", "Gifted": false}, 
-                                                                                                        {"Name": "Gold Bar", "Gifted": false}
-                                                                                                    ]},
-                            {"Name": "Einar", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":   [
-                                                                                                        {"Name": "Worm", "Gifted": false}, 
-                                                                                                        {"Name": "Ribbontail Ray", "Gifted": false}, 
-                                                                                                        {"Name": "Mottled Gobi", "Gifted": false}, 
-                                                                                                        {"Name": "Radiant Sunfish", "Gifted": false}
-                                                                                                    ]},
-                            {"Name": "Elouisa", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants": [
-                                                                                                        {"Name": "Duskray", "Gifted": false}, 
-                                                                                                        {"Name": "Inky Dragonfly", "Gifted": false}, 
-                                                                                                        {"Name": "Blobfish", "Gifted": false}, 
+                                                                                                        {"Name": "Golden Glory Bee", "Gifted": false}, 
                                                                                                         {"Name": "Giant Goldfish", "Gifted": false}
                                                                                                     ]},
+                            {"Name": "Einar", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":   [
+                                                                                                        {"Name": "Eyeless Minnow", "Gifted": false}, 
+                                                                                                        {"Name": "Prism Trout", "Gifted": false}, 
+                                                                                                        {"Name": "Vampire Crab", "Gifted": false}, 
+                                                                                                        {"Name": "Stormray", "Gifted": false}
+                                                                                                    ]},
+                            {"Name": "Elouisa", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants": [
+                                                                                                        {"Name": "Calico Koi", "Gifted": false}, 
+                                                                                                        {"Name": "Albino Eel", "Gifted": false}, 
+                                                                                                        {"Name": "Spitfire Cicada", "Gifted": false}, 
+                                                                                                        {"Name": "Ancient Amber Beetle", "Gifted": false}
+                                                                                                    ]},
                             {"Name": "Eshe", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":    [
-                                                                                                        {"Name": "Fur", "Gifted": false}, 
-                                                                                                        {"Name": "Bluefin Tuna", "Gifted": false}, 
+                                                                                                        {"Name": "Grilled Oyster", "Gifted": false}, 
+                                                                                                        {"Name": "Silk", "Gifted": false}, 
                                                                                                         {"Name": "Macaron", "Gifted": false}, 
-                                                                                                        {"Name": "Palian Onion Soup", "Gifted": false}
+                                                                                                        {"Name": "Jewelwing Dragonfly", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Hassian", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants": [
-                                                                                                        {"Name": "Fur", "Gifted": false}, 
+                                                                                                        {"Name": "Spotted Chapaa Tail", "Gifted": false}, 
                                                                                                         {"Name": "Chapaa Asada Tacos", "Gifted": false}, 
-                                                                                                        {"Name": "Proudhorned Sernuk Antlers", "Gifted": false}, 
-                                                                                                        {"Name": "Slowdown Arrow", "Gifted": false}
+                                                                                                        {"Name": "Iron Bar", "Gifted": false}, 
+                                                                                                        {"Name": "Fireworks Arrow", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Hekla", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":   [
-                                                                                                        {"Name": "Grilled Meat", "Gifted": false}, 
-                                                                                                        {"Name": "Bahari Bream", "Gifted": false}, 
-                                                                                                        {"Name": "Black Sea Bass", "Gifted": false}, 
+                                                                                                        {"Name": "Grilled Mushroom", "Gifted": false}, 
+                                                                                                        {"Name": "Largemouth Bass", "Gifted": false}, 
+                                                                                                        {"Name": "Ramen", "Gifted": false}, 
                                                                                                         {"Name": "Green Pearl", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Hodari", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":  [
-                                                                                                        {"Name": "Spotted Chapaa Tail", "Gifted": false}, 
-                                                                                                        {"Name": "Copper Bar", "Gifted": false}, 
-                                                                                                        {"Name": "Stonefish", "Gifted": false}, 
-                                                                                                        {"Name": "Spitfire Cicada", "Gifted": false}
+                                                                                                        {"Name": "Fur", "Gifted": false}, 
+                                                                                                        {"Name": "Heartwood", "Gifted": false}, 
+                                                                                                        {"Name": "Iron Bar", "Gifted": false}, 
+                                                                                                        {"Name": "Firebreathing Dragonfly", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Jel", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":     [
-                                                                                                        {"Name": "Coral", "Gifted": false}, 
-                                                                                                        {"Name": "Freshwater Eel", "Gifted": false}, 
+                                                                                                        {"Name": "Shell", "Gifted": false}, 
+                                                                                                        {"Name": "Lunar Fairy Moth", "Gifted": false}, 
                                                                                                         {"Name": "Petit Fives", "Gifted": false}, 
-                                                                                                        {"Name": "Bluebristle Muujin Mane", "Gifted": false}
+                                                                                                        {"Name": "Midnight Paddlefish", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Jina", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":    [
-                                                                                                        {"Name": "Wagon Wheel", "Gifted": false}, 
-                                                                                                        {"Name": "Brightshroom", "Gifted": false}, 
-                                                                                                        {"Name": "Radiant Sunfish", "Gifted": false}, 
-                                                                                                        {"Name": "Rainbow-Tipped Butterfly", "Gifted": false}
+                                                                                                        {"Name": "Congee", "Gifted": false}, 
+                                                                                                        {"Name": "Duskwing Butterfly", "Gifted": false}, 
+                                                                                                        {"Name": "Shimmerfin", "Gifted": false}, 
+                                                                                                        {"Name": "Cream of Mushroom Soup", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Kenli", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":   [
-                                                                                                        {"Name": "Spotted Chapaa Tail", "Gifted": false}, 
-                                                                                                        {"Name": "Ramen", "Gifted": false}, 
-                                                                                                        {"Name": "Trout Dinner", "Gifted": false}, 
-                                                                                                        {"Name": "Meaty Stir Fry", "Gifted": false}
+                                                                                                        {"Name": "Grilled Fish", "Gifted": false}, 
+                                                                                                        {"Name": "Garden Ladybug", "Gifted": false}, 
+                                                                                                        {"Name": "Princess Ladybug", "Gifted": false}, 
+                                                                                                        {"Name": "Palian Onion Soup", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Kenyatta", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":[
-                                                                                                        {"Name": "Crystal Lake Lotus", "Gifted": false}, 
-                                                                                                        {"Name": "Cutthroat Trout", "Gifted": false}, 
-                                                                                                        {"Name": "Firebreathing Dragonfly", "Gifted": false}, 
-                                                                                                        {"Name": "Bluebristle Muujin Mane", "Gifted": false}
+                                                                                                        {"Name": "Wild Garlic", "Gifted": false}, 
+                                                                                                        {"Name": "Creamy Carrot Soup", "Gifted": false}, 
+                                                                                                        {"Name": "Banded Muujin Mane", "Gifted": false}, 
+                                                                                                        {"Name": "Crimson Fangtooth", "Gifted": false}
                                                                                                     ]},
-                            {"Name": "Nai\"O", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":  [
-                                                                                                        {"Name": "Wagon Wheel", "Gifted": false}, 
-                                                                                                        {"Name": "Kilima Catfish", "Gifted": false}, 
-                                                                                                        {"Name": "Bahari Pike", "Gifted": false}, 
+                            {"Name": "Nai'O", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":  [
+                                                                                                        {"Name": "Muujin Meat", "Gifted": false}, 
+                                                                                                        {"Name": "Channel Catfish", "Gifted": false}, 
+                                                                                                        {"Name": "Blueberry Bush Seed", "Gifted": false}, 
                                                                                                         {"Name": "Steak Dinner", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Najuma", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":  [
-                                                                                                        {"Name": "Tomato Plant Seed", "Gifted": false}, 
+                                                                                                        {"Name": "Wild Garlic", "Gifted": false}, 
                                                                                                         {"Name": "Copper Bar", "Gifted": false}, 
-                                                                                                        {"Name": "Apple", "Gifted": false}, 
+                                                                                                        {"Name": "Cream of Tomato Soup", "Gifted": false}, 
                                                                                                         {"Name": "Blueberry Pie", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Reth", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":    [
-                                                                                                        {"Name": "Carrot", "Gifted": false}, 
+                                                                                                        {"Name": "Potato", "Gifted": false}, 
                                                                                                         {"Name": "Ramen", "Gifted": false}, 
-                                                                                                        {"Name": "Apple Jam", "Gifted": false}, 
+                                                                                                        {"Name": "Raspberry Beetle", "Gifted": false}, 
                                                                                                         {"Name": "Dari Cloves", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Sifuu", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":   [
-                                                                                                        {"Name": "Stone Brick", "Gifted": false}, 
-                                                                                                        {"Name": "Elder Sernuk Antlers", "Gifted": false}, 
+                                                                                                        {"Name": "Chapaa Meat", "Gifted": false}, 
+                                                                                                        {"Name": "Standard Arrow", "Gifted": false}, 
                                                                                                         {"Name": "Iron Bar", "Gifted": false}, 
-                                                                                                        {"Name": "Swordfin Eel", "Gifted": false}
+                                                                                                        {"Name": "Fireworks Arrow", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Subira", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":   [
-                                                                                                        {"Name": "Flow-Infused Wood", "Gifted": false}, 
-                                                                                                        {"Name": "Gold Bar", "Gifted": false}, 
-                                                                                                        {"Name": "Dari Cloves", "Gifted": false}, 
-                                                                                                        {"Name": "Firebreathing Dragonfly", "Gifted": false}
+                                                                                                        {"Name": "Congee", "Gifted": false}, 
+                                                                                                        {"Name": "Trout Dinner", "Gifted": false}, 
+                                                                                                        {"Name": "Ancient Amber Beetle", "Gifted": false}, 
+                                                                                                        {"Name": "Chapaa Onigiri", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Tamala", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":  [
-                                                                                                        {"Name": "Fur", "Gifted": false}, 
-                                                                                                        {"Name": "Garden Millipede", "Gifted": false}, 
+                                                                                                        {"Name": "Emerald Carpet Moss", "Gifted": false}, 
+                                                                                                        {"Name": "Lunar Fairy Moth", "Gifted": false}, 
                                                                                                         {"Name": "Hairy Millipede", "Gifted": false}, 
-                                                                                                        {"Name": "Fairy Mantis", "Gifted": false}
+                                                                                                        {"Name": "Leafstalker Mantis", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Tau", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":     [
-                                                                                                        {"Name": "Common Field Cricket", "Gifted": false}, 
-                                                                                                        {"Name": "Silver Salmon", "Gifted": false}, 
-                                                                                                        {"Name": "Grilled Oyster", "Gifted": false}, 
-                                                                                                        {"Name": "Shimmerfin", "Gifted": false}
+                                                                                                        {"Name": "Fried Catfish Dinner", "Gifted": false}, 
+                                                                                                        {"Name": "Unopened Oyster", "Gifted": false}, 
+                                                                                                        {"Name": "Brighteye Butterfly", "Gifted": false}, 
+                                                                                                        {"Name": "Apple", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Tish", "dailyGift": false, "romance": true, "weeklyromance": false, "weeklyWants":    [
-                                                                                                        {"Name": "Sapwood Plank", "Gifted": false}, 
-                                                                                                        {"Name": "Samara", "Gifted": false}, 
-                                                                                                        {"Name": "Petit Fives", "Gifted": false}, 
-                                                                                                        {"Name": "Blueberry Pie", "Gifted": false}
+                                                                                                        {"Name": "Ship Fragments", "Gifted": false}, 
+                                                                                                        {"Name": "Acorn", "Gifted": false}, 
+                                                                                                        {"Name": "Apple Pie", "Gifted": false}, 
+                                                                                                        {"Name": "Green Pearl", "Gifted": false}
                                                                                                     ]},
                             {"Name": "Zeki", "dailyGift": false, "romance": false, "weeklyromance": false, "weeklyWants":    [
-                                                                                                        {"Name": "Silvery Minnow", "Gifted": false}, 
-                                                                                                        {"Name": "Fish Stew", "Gifted": false}, 
-                                                                                                        {"Name": "Oysters Akwinduu", "Gifted": false}, 
-                                                                                                        {"Name": "Bouillabaisse", "Gifted": false}
+                                                                                                        {"Name": "Grilled Fish", "Gifted": false}, 
+                                                                                                        {"Name": "Silk", "Gifted": false}, 
+                                                                                                        {"Name": "Pearl", "Gifted": false}, 
+                                                                                                        {"Name": "Gold Ore", "Gifted": false}
                                                                                                     ]}
 ]
